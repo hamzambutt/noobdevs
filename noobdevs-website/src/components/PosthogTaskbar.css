@@ -1,0 +1,128 @@
+/* ============================================
+   POSTHOG TASKBAR (OS Bottom Bar)
+   ============================================ */
+
+.ph-taskbar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  background: rgba(229, 231, 224, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--ph-border-medium, #BFBFB8);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  z-index: 9000;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+.ph-taskbar-left, .ph-taskbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 100%;
+}
+
+.ph-taskbar-start {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ph-text-primary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ph-taskbar-start:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.ph-start-icon {
+  background: var(--ph-orange-cta);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.ph-taskbar-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--ph-border-medium);
+  margin: 0 4px;
+}
+
+.ph-taskbar-app {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid transparent;
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ph-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-width: 140px;
+}
+
+.ph-taskbar-app:hover {
+  background: rgba(255,255,255,0.7);
+  color: var(--ph-text-primary);
+}
+
+.ph-taskbar-app.active {
+  background: rgba(255,255,255,0.9);
+  border-color: var(--ph-border-light);
+  color: var(--ph-text-primary);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.ph-taskbar-mode-toggle {
+  background: var(--ph-orange-cta);
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.ph-taskbar-mode-toggle:hover {
+  background: var(--ph-orange-hover);
+}
+
+.ph-taskbar-tray {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 8px;
+  font-size: 0.85rem;
+  color: var(--ph-text-secondary);
+}
+
+.ph-tray-icon {
+  font-size: 1rem;
+}
+
+.ph-tray-time {
+  font-weight: 500;
+}

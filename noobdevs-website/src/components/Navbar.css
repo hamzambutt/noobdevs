@@ -1,0 +1,257 @@
+/* ============================================
+   POSTHOG-STYLE NAVBAR STYLES
+   ============================================ */
+
+.ph-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(229, 231, 224, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--ph-border-light);
+  padding: 10px 24px;
+}
+
+.ph-navbar-content {
+  max-width: var(--ph-container-max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ph-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.ph-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--ph-text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 1;
+}
+
+.ph-logo:hover {
+  opacity: 1;
+}
+
+.ph-logo-icon {
+  width: 30px;
+  height: 30px;
+  background: var(--ph-orange-cta);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.ph-nav-menu {
+  display: flex;
+  gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ph-nav-item {
+  position: relative;
+}
+
+.ph-nav-link {
+  color: var(--ph-text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all var(--ph-transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.ph-nav-link:hover {
+  color: var(--ph-text-primary);
+  background-color: rgba(0, 0, 0, 0.04);
+  opacity: 1;
+}
+
+.ph-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ph-btn-cta {
+  background-color: var(--ph-orange-cta);
+  color: var(--ph-text-white);
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all var(--ph-transition-fast);
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.ph-btn-cta:hover {
+  background-color: var(--ph-orange-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(245, 78, 0, 0.25);
+  opacity: 1;
+}
+
+/* ============================================
+   DROPDOWN MENUS
+   ============================================ */
+.ph-dropdown-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ph-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--ph-bg-card, #fff);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+  padding: 8px;
+  min-width: 300px;
+  z-index: 1100;
+  border: 1px solid var(--ph-border-light);
+  animation: dropdownFadeIn 0.15s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.ph-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: var(--ph-text-primary);
+  border-radius: 8px;
+  transition: all var(--ph-transition-fast);
+  opacity: 1;
+}
+
+.ph-dropdown-item:hover {
+  background-color: var(--ph-bg-light);
+  opacity: 1;
+}
+
+.ph-dropdown-icon {
+  font-size: 1.3rem;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ph-bg-light);
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.ph-dropdown-title {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ph-text-primary);
+  margin-bottom: 1px;
+}
+
+.ph-dropdown-desc {
+  font-size: 0.8rem;
+  color: var(--ph-text-secondary);
+}
+
+/* ============================================
+   MODE TOGGLE BUTTON
+   ============================================ */
+.ph-btn-mode-toggle {
+  background-color: transparent;
+  border: 1px solid var(--ph-border-light);
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--ph-text-secondary);
+  transition: all var(--ph-transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.ph-btn-mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: var(--ph-border-medium);
+  color: var(--ph-text-primary);
+}
+
+.mode-toggle-icon {
+  font-size: 0.9rem;
+}
+
+.mode-toggle-text {
+  font-size: 0.82rem;
+}
+
+/* ============================================
+   OS MODE NAVBAR
+   ============================================ */
+.ph-navbar-os {
+  background: rgba(238, 237, 233, 0.95);
+  border-bottom: 1px solid var(--ph-border-light);
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+  .ph-navbar {
+    padding: 10px 16px;
+  }
+
+  .ph-navbar-left {
+    gap: 16px;
+  }
+
+  .ph-nav-menu {
+    display: none;
+  }
+
+  .mode-toggle-text {
+    display: none;
+  }
+
+  .ph-logo-icon + span {
+    display: none;
+  }
+}

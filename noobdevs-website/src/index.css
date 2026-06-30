@@ -1,0 +1,260 @@
+/* ============================================
+   GLOBAL STYLES - PostHog Inspired Design
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+
+/* CSS Variables - PostHog ACTUAL Color Palette */
+:root {
+  /* Primary Colors - PostHog's real red-orange, not amber */
+  --ph-orange-cta: #F54E00;
+  --ph-orange-hover: #E04500;
+  --ph-purple-primary: #6C47FF;
+  --ph-purple-secondary: #8B5CF6;
+  --ph-accent-cyan: #3B9E9A;
+
+  /* Text Colors */
+  --ph-text-primary: #151515;
+  --ph-text-secondary: #757575;
+  --ph-text-muted: #9CA3AF;
+  --ph-text-white: #FFFFFF;
+
+  /* Background Colors - PostHog's warm sage/cream palette */
+  --ph-bg-white: #E5E7E0;
+  --ph-bg-light: #F5F4EF;
+  --ph-bg-gray: #EEEDE9;
+  --ph-bg-dark: #151515;
+  --ph-bg-carpet: #E8D5B7;
+  --ph-bg-card: #FFFFFF;
+
+  /* Border Colors */
+  --ph-border-light: #D4D4CE;
+  --ph-border-medium: #BFBFB8;
+  --ph-border-dark: #4B5563;
+
+  /* Spacing */
+  --ph-section-padding: 80px;
+  --ph-container-max-width: 1200px;
+  --ph-container-padding: 0 24px;
+
+  /* Typography */
+  --ph-font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --ph-font-code: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Shadows */
+  --ph-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --ph-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+  --ph-shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --ph-shadow-xl: 0 20px 40px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transitions */
+  --ph-transition-fast: 150ms ease;
+  --ph-transition-normal: 300ms ease;
+}
+
+/* Reset & Base Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--ph-font-primary);
+  color: var(--ph-text-primary);
+  background-color: var(--ph-bg-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ph-bg-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ph-border-medium);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ph-text-muted);
+}
+
+/* Selection Styles */
+::selection {
+  background-color: rgba(108, 71, 255, 0.2);
+  color: var(--ph-text-primary);
+}
+
+/* Link Styles */
+a {
+  color: var(--ph-purple-primary);
+  text-decoration: none;
+  transition: all var(--ph-transition-fast);
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* Button Base Styles */
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Input Styles */
+input,
+textarea,
+select {
+  font-family: inherit;
+  border: 1px solid var(--ph-border-light);
+  border-radius: 6px;
+  padding: 8px 12px;
+  outline: none;
+  transition: all var(--ph-transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--ph-purple-primary);
+  box-shadow: 0 0 0 3px rgba(108, 71, 255, 0.1);
+}
+
+/* Table Styles */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th {
+  font-weight: 600;
+  text-align: left;
+}
+
+td, th {
+  padding: 8px 12px;
+}
+
+/* Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Code Block Styles */
+code {
+  font-family: var(--ph-font-code);
+  background-color: var(--ph-bg-light);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease infinite;
+}
+
+/* Print Styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  .ph-navbar,
+  .ph-footer,
+  button,
+  nav {
+    display: none;
+  }
+}

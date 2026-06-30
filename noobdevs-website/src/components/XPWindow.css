@@ -1,0 +1,200 @@
+/* === XP WINDOW COMPONENT === */
+.xp-window {
+  position: absolute;
+  background: #ECE9D8;
+  border: 3px solid #0054E3;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 2px 4px 20px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 100;
+  animation: windowOpen 0.3s ease-out;
+}
+
+@keyframes windowOpen {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Title Bar */
+.xp-titlebar {
+  height: 32px;
+  background: linear-gradient(180deg, 
+    #0A246A 0%, 
+    #0F5DCB 8%, 
+    #0A246A 18%,
+    #0A246A 85%,
+    #071D5E 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6px;
+  cursor: default;
+  user-select: none;
+  border-radius: 0 0 0 0;
+}
+
+.xp-titlebar-text {
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.xp-titlebar-icon {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+/* Title Bar Buttons */
+.xp-titlebar-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.xp-titlebar-btn {
+  width: 21px;
+  height: 21px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+}
+
+.xp-btn-minimize {
+  background: linear-gradient(180deg, #3C8DF5, #1A6BBF);
+  color: white;
+  border: 1px solid #0A4EA2;
+}
+
+.xp-btn-maximize {
+  background: linear-gradient(180deg, #3C8DF5, #1A6BBF);
+  color: white;
+  border: 1px solid #0A4EA2;
+}
+
+.xp-btn-close {
+  background: linear-gradient(180deg, #E97A5A, #CC4D2C);
+  color: white;
+  border: 1px solid #A8391F;
+}
+
+.xp-titlebar-btn:hover {
+  filter: brightness(1.2);
+}
+
+.xp-titlebar-btn:active {
+  transform: scale(0.95);
+}
+
+/* Window Body */
+.xp-window-body {
+  flex: 1;
+  background: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0;
+  min-height: 0;
+}
+
+/* Window Footer / Status Bar */
+.xp-statusbar {
+  height: 24px;
+  background: #ECE9D8;
+  border-top: 1px solid #ACA899;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  font-size: 11px;
+  color: #444;
+}
+
+/* Browser Chrome (for the main browser window) */
+.browser-chrome {
+  background: #ECE9D8;
+  border-bottom: 1px solid #ACA899;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.browser-nav-btn {
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border: 1px solid #ACA899;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #666;
+}
+
+.browser-nav-btn:hover {
+  background: #E0DED4;
+}
+
+.browser-address-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #7F9DB9;
+  border-radius: 2px;
+  padding: 3px 6px;
+  gap: 6px;
+}
+
+.browser-address-icon {
+  color: #4CAF50;
+  font-size: 14px;
+}
+
+.browser-address-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  font-family: 'Tahoma', Arial, sans-serif;
+  color: #333;
+  background: transparent;
+}
+
+/* Content Area Styling */
+.content-area {
+  background: #fff;
+  min-height: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .xp-window {
+    width: 100% !important;
+    height: calc(100vh - 40px) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}

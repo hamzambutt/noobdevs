@@ -1,0 +1,229 @@
+/* === PROJECTS WINDOW - MODERN DARK THEME (PostHog Style) === */
+.projects-window-content {
+  width: 100%;
+  min-height: 100vh;
+  background: #0d0d0d;
+  overflow-y: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: #fff;
+}
+
+/* Header */
+.projects-header {
+  background: rgba(13, 13, 13, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 24px;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.projects-header h1 {
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 0;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+.projects-tagline {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.8rem;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
+
+/* Projects Grid */
+.projects-grid-retro {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 24px;
+  padding: 40px 24px;
+  background: #0d0d0d;
+}
+
+.retro-project-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 26px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.retro-project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.retro-project-card:hover {
+  border-color: rgba(138, 43, 226, 0.3);
+  background: linear-gradient(180deg, rgba(138, 43, 226, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 60px rgba(138, 43, 226, 0.1);
+}
+
+.retro-project-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.retro-project-icon {
+  font-size: 2rem;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.retro-project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.retro-classification {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.status-badge-retro {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  align-self: flex-start;
+  letter-spacing: 0.5px;
+}
+
+.status-active {
+  background: rgba(76, 175, 80, 0.15);
+  color: #4CAF50;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+}
+
+.status-live {
+  background: rgba(33, 150, 243, 0.15);
+  color: #2196F3;
+  border: 1px solid rgba(33, 150, 243, 0.2);
+}
+
+.status-in-progress {
+  background: rgba(255, 193, 7, 0.15);
+  color: #FFC107;
+  border: 1px solid rgba(255, 193, 7, 0.2);
+}
+
+.retro-project-card h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 6px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.retro-subtitle {
+  color: rgba(138, 43, 226, 0.8);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.retro-description {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  margin-bottom: 18px;
+}
+
+.retro-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.retro-spec-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  text-align: center;
+}
+
+.retro-spec-label {
+  display: block;
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.retro-spec-value {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.retro-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.retro-tech-tag {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.4);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+/* Footer */
+.projects-footer {
+  background: rgba(13, 13, 13, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.projects-footer p {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .projects-grid-retro {
+    grid-template-columns: 1fr;
+  }
+  
+  .retro-specs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,260 @@
+/* ============================================
+   POSTHOG-INSPIRED UNIFIED DESKTOP DESIGN SYSTEM
+   ============================================ */
+
+/* Desktop Site Container */
+.desktop-site {
+  min-height: 100vh;
+  background-color: #E6E4DD; /* Warm beige/grey Posthog background */
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ============================================
+   POSTHOG-STYLE NAVBAR
+   ============================================ */
+.ph-navbar {
+  position: relative;
+  z-index: 1000;
+  background: transparent;
+  padding: 12px 24px;
+}
+
+.ph-navbar-content {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ph-navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.ph-logo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ph-text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ph-logo-icon {
+  width: 24px;
+  height: 24px;
+  background: var(--ph-text-primary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #E6E4DD;
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+.ph-nav-menu {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+}
+
+.ph-nav-item {
+  position: relative;
+}
+
+.ph-nav-link {
+  color: var(--ph-text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transition: all var(--ph-transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.ph-nav-link:hover {
+  color: var(--ph-text-primary);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.ph-navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ph-btn-cta {
+  background-color: var(--ph-orange-cta);
+  color: var(--ph-text-white);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all var(--ph-transition-fast);
+  border: none;
+  cursor: pointer;
+  border-bottom: 2px solid rgba(0,0,0,0.2);
+}
+
+.ph-btn-cta:hover {
+  background-color: var(--ph-orange-hover);
+  transform: translateY(-1px);
+  border-bottom-width: 3px;
+}
+
+.ph-btn-cta:active {
+  transform: translateY(1px);
+  border-bottom-width: 1px;
+}
+
+.ph-navbar-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  color: var(--ph-text-secondary);
+}
+
+.ph-navbar-icon:hover {
+  background-color: rgba(0,0,0,0.05);
+  color: var(--ph-text-primary);
+}
+
+/* ============================================
+   DESKTOP LAYOUT (Sidebar + Main Window)
+   ============================================ */
+.desktop-layout {
+  display: flex;
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  padding: 0 16px 16px 16px;
+}
+
+/* Sidebars */
+.desktop-sidebar {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+  z-index: 10;
+}
+
+.desktop-sidebar-right {
+  width: 120px; /* Slightly wider for longer text */
+}
+
+.sidebar-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  cursor: pointer;
+  width: 100%;
+}
+
+.sidebar-icon:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+
+.sidebar-icon-img {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  /* Add subtle shadow to icons to make them pop against background */
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.sidebar-icon-label {
+  font-size: 0.7rem;
+  color: var(--ph-text-primary);
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* Main Content Area */
+.desktop-main {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 20;
+}
+
+/* ============================================
+   HERO / CONTENT SPECIFIC (Overrides for MDX Window)
+   ============================================ */
+.ph-hero {
+  padding: 40px 48px;
+  text-align: left; /* Posthog aligns text to left in this view */
+}
+
+.ph-hero-headline {
+  text-align: left;
+  font-size: 2.8rem;
+}
+
+.ph-hero-subtitle {
+  text-align: left;
+  margin-left: 0;
+  max-width: 600px;
+  font-size: 1.05rem;
+}
+
+.ph-hero-cta-group {
+  justify-content: flex-start;
+}
+
+.ph-install-command {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+/* Hide some sections that don't belong in the home.mdx view */
+.os-mode .ph-footer {
+  display: none;
+}
+
+/* ============================================
+   SEAMLESS WEBSITE MODE
+   ============================================ */
+.website-mode-container {
+  min-height: 100vh;
+  background-color: var(--ph-bg-main, #FDFDF8);
+  display: flex;
+  flex-direction: column;
+}
+
+.website-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}

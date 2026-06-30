@@ -1,0 +1,130 @@
+/* === BOOT SCREEN === */
+.boot-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.boot-screen.fade-out {
+  animation: bootFadeOut 0.5s ease-out forwards;
+}
+
+.boot-content {
+  text-align: center;
+}
+
+/* Windows XP Flag Logo */
+.xp-logo {
+  margin-bottom: 60px;
+}
+
+.windows-flag {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  transform: rotate(0deg);
+  animation: flagWave 2s ease-in-out infinite;
+}
+
+.flag-red {
+  background: #FF0000;
+  border-radius: 3px 0 0 0;
+}
+
+.flag-green {
+  background: #00AA00;
+  border-radius: 0 0 0 3px;
+}
+
+.flag-blue {
+  background: #0000FF;
+  border-radius: 0 0 3px 0;
+}
+
+.flag-yellow {
+  background: #FFDD00;
+  border-radius: 0 3px 0 0;
+}
+
+@keyframes flagWave {
+  0%, 100% { transform: rotate(-2deg) scale(1); }
+  50% { transform: rotate(2deg) scale(1.05); }
+}
+
+.xp-title {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: normal;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Boot Text & Progress */
+.boot-text {
+  margin-top: 40px;
+}
+
+.boot-message {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+  animation: blink 1s step-end infinite;
+}
+
+.progress-container {
+  width: 300px;
+  height: 20px;
+  border: 1px solid #444;
+  background: #000;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, 
+    #0066CC, 
+    #3399FF, 
+    #0066CC
+  );
+  background-size: 50% 100%;
+  animation: progressShimmer 1.5s linear infinite;
+  transition: width 0.2s ease-out;
+}
+
+@keyframes progressShimmer {
+  0% { background-position: 0 0; }
+  100% { background-position: 50% 0; }
+}
+
+/* Boot Footer */
+.boot-footer {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.boot-footer p {
+  color: #555;
+  font-size: 0.7rem;
+}
+
+/* Fade out animation (applied by parent state change) */
+@keyframes bootFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; pointer-events: none; }
+}
