@@ -8,7 +8,7 @@ import './App.css';
 
 function App() {
   const [phase, setPhase] = useState('boot'); // starts in boot
-  const [mode, setMode] = useState('os'); // 'os' or 'website'
+  const [mode, setMode] = useState(window.innerWidth < 768 ? 'website' : 'os'); // 'os' or 'website'
   
   // OS Mode Window State
   const [windows, setWindows] = useState([

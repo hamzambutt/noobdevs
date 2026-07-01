@@ -514,6 +514,17 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
   .hero-container h2 {
     font-size: 2.2rem;
   }
