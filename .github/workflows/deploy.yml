@@ -29,15 +29,17 @@ jobs:
           node-version: 24
           
       - name: Install dependencies
+        working-directory: ./noobdevs
         run: npm install
-    
+        
       - name: Build project
+        working-directory: ./noobdevs
         run: npm run build
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './noobdevs/dist'
           
       - name: Deploy to GitHub Pages
         id: deployment
