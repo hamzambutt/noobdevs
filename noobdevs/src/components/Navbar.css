@@ -1,20 +1,20 @@
 /* ============================================
-   POSTHOG-STYLE NAVBAR STYLES
+   NAVBAR - MODERN DARK SAAS STYLE
    ============================================ */
 
 .ph-navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(229, 231, 224, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--ph-border-light);
-  padding: 10px 24px;
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 12px 24px;
 }
 
 .ph-navbar-content {
-  max-width: var(--ph-container-max-width);
+  max-width: var(--container-max);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -29,35 +29,36 @@
 
 .ph-logo {
   font-size: 1.4rem;
-  font-weight: 700;
-  color: var(--ph-text-primary);
+  font-weight: 800;
+  color: var(--text-primary);
   text-decoration: none;
   display: flex;
   align-items: center;
   gap: 8px;
-  opacity: 1;
+  letter-spacing: -0.02em;
 }
 
 .ph-logo:hover {
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .ph-logo-icon {
-  width: 30px;
-  height: 30px;
-  background: var(--ph-orange-cta);
-  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-dark));
+  border-radius: var(--radius-md);
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: bold;
   font-size: 0.85rem;
+  box-shadow: 0 2px 8px rgba(255, 26, 26, 0.2);
 }
 
 .ph-nav-menu {
   display: flex;
-  gap: 2px;
+  gap: 4px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -68,13 +69,13 @@
 }
 
 .ph-nav-link {
-  color: var(--ph-text-secondary);
+  color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 6px;
-  transition: all var(--ph-transition-fast);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -82,36 +83,34 @@
 }
 
 .ph-nav-link:hover {
-  color: var(--ph-text-primary);
-  background-color: rgba(0, 0, 0, 0.04);
-  opacity: 1;
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .ph-navbar-right {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .ph-btn-cta {
-  background-color: var(--ph-orange-cta);
-  color: var(--ph-text-white);
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-dark));
+  color: white;
   padding: 8px 18px;
-  border-radius: 6px;
+  border-radius: var(--radius-md);
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   text-decoration: none;
-  transition: all var(--ph-transition-fast);
+  transition: all var(--transition-smooth);
   border: none;
   cursor: pointer;
-  opacity: 1;
+  box-shadow: 0 2px 8px rgba(255, 26, 26, 0.15);
 }
 
 .ph-btn-cta:hover {
-  background-color: var(--ph-orange-hover);
+  background: linear-gradient(135deg, var(--accent-primary-dark), #990000);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(245, 78, 0, 0.25);
-  opacity: 1;
+  box-shadow: 0 4px 16px rgba(255, 26, 26, 0.3);
 }
 
 /* ============================================
@@ -126,23 +125,23 @@
 
 .ph-dropdown-menu {
   position: absolute;
-  top: calc(100% + 4px);
+  top: calc(100% + 8px);
   left: 50%;
-  transform: translateX(-50%);
-  background-color: var(--ph-bg-card, #fff);
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+  transform: translateX(-50%) translateY(0);
+  background-color: var(--bg-card);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
   padding: 8px;
   min-width: 300px;
   z-index: 1100;
-  border: 1px solid var(--ph-border-light);
-  animation: dropdownFadeIn 0.15s ease;
+  border: 1px solid var(--border-default);
+  animation: dropdownFadeIn 0.2s ease;
 }
 
 @keyframes dropdownFadeIn {
   from {
     opacity: 0;
-    transform: translateX(-50%) translateY(-4px);
+    transform: translateX(-50%) translateY(-8px);
   }
   to {
     opacity: 1;
@@ -154,41 +153,39 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 14px;
+  padding: 12px 14px;
   text-decoration: none;
-  color: var(--ph-text-primary);
-  border-radius: 8px;
-  transition: all var(--ph-transition-fast);
-  opacity: 1;
+  color: var(--text-primary);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
 }
 
 .ph-dropdown-item:hover {
-  background-color: var(--ph-bg-light);
-  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .ph-dropdown-icon {
   font-size: 1.3rem;
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--ph-bg-light);
-  border-radius: 6px;
+  background: var(--bg-tertiary);
+  border-radius: var(--radius-md);
   flex-shrink: 0;
 }
 
 .ph-dropdown-title {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--ph-text-primary);
-  margin-bottom: 1px;
+  color: var(--text-primary);
+  margin-bottom: 2px;
 }
 
 .ph-dropdown-desc {
   font-size: 0.8rem;
-  color: var(--ph-text-secondary);
+  color: var(--text-secondary);
 }
 
 /* ============================================
@@ -196,13 +193,13 @@
    ============================================ */
 .ph-btn-mode-toggle {
   background-color: transparent;
-  border: 1px solid var(--ph-border-light);
+  border: 1px solid var(--border-subtle);
   padding: 6px 14px;
-  border-radius: 6px;
+  border-radius: var(--radius-md);
   cursor: pointer;
   font-size: 0.85rem;
-  color: var(--ph-text-secondary);
-  transition: all var(--ph-transition-fast);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -210,9 +207,9 @@
 }
 
 .ph-btn-mode-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-  border-color: var(--ph-border-medium);
-  color: var(--ph-text-primary);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--border-strong);
+  color: var(--text-primary);
 }
 
 .mode-toggle-icon {
@@ -221,14 +218,6 @@
 
 .mode-toggle-text {
   font-size: 0.82rem;
-}
-
-/* ============================================
-   OS MODE NAVBAR
-   ============================================ */
-.ph-navbar-os {
-  background: rgba(238, 237, 233, 0.95);
-  border-bottom: 1px solid var(--ph-border-light);
 }
 
 /* ============================================

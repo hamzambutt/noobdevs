@@ -1,6 +1,10 @@
+/* ============================================
+   ABOUT - MODERN DARK SAAS STYLE
+   ============================================ */
+
 .about-section {
   background: var(--bg-primary);
-  position: relative;
+  padding: 80px 24px;
 }
 
 .about-grid {
@@ -8,6 +12,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 72px;
   align-items: start;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 .about-content .section-label {
@@ -16,7 +22,7 @@
 
 .about-content h2 {
   font-family: var(--font-sans) !important;
-  font-size: 2.25rem;
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
   font-weight: 800;
   line-height: 1.15;
   margin-bottom: 18px;
@@ -44,7 +50,7 @@
   padding: 18px;
   background: var(--bg-tertiary);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   transition: all var(--transition-default);
 }
 
@@ -65,7 +71,7 @@
   font-size: 1.125rem;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
 }
 
 .about-feature h4 {
@@ -97,7 +103,7 @@
 .stat-card {
   background: var(--bg-tertiary);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: 28px 24px;
   text-align: center;
   transition: all var(--transition-smooth);
@@ -119,7 +125,7 @@
 
 .stat-card:hover {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: var(--border-strong);
 }
 

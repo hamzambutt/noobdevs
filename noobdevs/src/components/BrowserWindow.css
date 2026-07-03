@@ -1,8 +1,8 @@
 /* ============================================
-   XP WINDOW - CLASSIC WINDOWS XP STYLE
+   BROWSER WINDOW - XP STYLE
    ============================================ */
 
-.xp-window {
+.browser-window {
   position: absolute;
   background: #ECE9D8;
   border: 2px solid #0A246A;
@@ -10,19 +10,18 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3), 0 1px 4px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  min-width: 300px;
-  min-height: 200px;
+  min-width: 350px;
+  min-height: 250px;
   z-index: 100;
   overflow: hidden;
 }
 
-.xp-window.dragging {
+.browser-window.dragging {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
   z-index: 101;
 }
 
-/* Title Bar */
-.xp-titlebar {
+.browser-titlebar {
   background: linear-gradient(180deg, #0A246A 0%, #1B3FB5 40%, #0F5DCB 100%);
   height: 30px;
   display: flex;
@@ -33,11 +32,7 @@
   user-select: none;
 }
 
-.xp-titlebar.dragging {
-  cursor: grabbing;
-}
-
-.xp-titlebar-text {
+.browser-titlebar-text {
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -48,16 +43,15 @@
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.xp-titlebar-controls {
+.browser-titlebar-controls {
   display: flex;
   gap: 2px;
 }
 
-.xp-btn-control {
+.browser-btn-control {
   width: 21px;
   height: 21px;
   border: none;
-  border-radius: 0;
   font-size: 10px;
   font-weight: bold;
   cursor: pointer;
@@ -65,57 +59,24 @@
   align-items: center;
   justify-content: center;
   color: white;
-  transition: all var(--transition-fast);
 }
 
-.xp-btn-minimize {
-  background: linear-gradient(180deg, #3C6E9A 0%, #2B5478 100%);
-  margin-right: 2px;
-}
-
-.xp-btn-maximize {
-  background: linear-gradient(180deg, #3C6E9A 0%, #2B5478 100%);
-  margin-right: 2px;
-}
-
-.xp-btn-close {
+.browser-btn-close {
   background: linear-gradient(180deg, #DB5C4D 0%, #C43D2E 100%);
   border: 1px solid rgba(160, 30, 20, 0.6);
 }
 
-.xp-btn-control:hover {
-  filter: brightness(1.15);
-}
-
-.xp-btn-close:hover {
+.browser-btn-close:hover {
   background: linear-gradient(180deg, #E86D5E 0%, #D44E3F 100%);
-  box-shadow: 0 0 6px rgba(219, 92, 77, 0.4);
 }
 
-.xp-btn-control:active {
-  transform: scale(0.95);
-}
-
-/* Window Body */
-.xp-window-body {
+.browser-window-body {
   flex: 1;
   background: white;
   overflow-y: auto;
-  overflow-x: hidden;
+  padding: 12px;
 }
 
-/* Resize Handle */
-.xp-resize-handle {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 16px;
-  height: 16px;
-  cursor: nwse-resize;
-  background: linear-gradient(135deg, transparent 40%, #999 40%, #999 45%, transparent 45%, transparent 60%, #999 60%, #999 65%, transparent 65%);
-}
-
-/* Minimized State */
-.xp-window.minimized {
+.browser-window.minimized {
   display: none;
 }

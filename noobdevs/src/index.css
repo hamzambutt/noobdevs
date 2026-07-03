@@ -1,59 +1,100 @@
 /* ============================================
-   GLOBAL STYLES - PostHog Inspired Design
+   GLOBAL STYLES - NoobDev Design System
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
-/* CSS Variables - PostHog ACTUAL Color Palette */
+/* ============================================
+   DESIGN TOKENS — Single source of truth
+   ============================================ */
 :root {
-  /* Primary Colors - PostHog's real red-orange, not amber */
-  --ph-orange-cta: #F54E00;
-  --ph-orange-hover: #E04500;
-  --ph-purple-primary: #6C47FF;
-  --ph-purple-secondary: #8B5CF6;
-  --ph-accent-cyan: #3B9E9A;
+  /* ---- Primary Accent (Warm Red-Orange) ---- */
+  --accent-primary: #FF1A1A;
+  --accent-primary-light: rgba(255, 26, 26, 0.08);
+  --accent-primary-dark: #CC0000;
+  --accent-primary-glow: rgba(255, 26, 26, 0.25);
 
-  /* Text Colors */
+  /* ---- Secondary Accents ---- */
+  --accent-violet: #8B5CF6;
+  --accent-violet-light: rgba(139, 92, 246, 0.08);
+  --accent-green: #22C55E;
+  --accent-blue: #3B82F6;
+  --accent-cyan: #06B6D4;
+  --accent-gold: #F59E0B;
+
+  /* ---- CTA (Orange) ---- */
+  --cta-primary: #F54E00;
+  --cta-hover: #E04500;
+  --cta-light: rgba(245, 78, 0, 0.1);
+
+  /* ---- Purple Accent ---- */
+  --purple-primary: #6C47FF;
+  --purple-secondary: #8B5CF6;
+  --purple-light: rgba(108, 71, 255, 0.1);
+
+  /* ---- Neutral Grays (Dark-first palette) ---- */
+  --bg-primary: #0D0D0D;
+  --bg-secondary: #141414;
+  --bg-tertiary: #1A1A1A;
+  --bg-card: #1E1E1E;
+  --bg-elevated: #252525;
+
+  /* ---- Light Mode Overrides (for OS mode) ---- */
+  --ph-bg-main: #F5F4EF;
+  --ph-bg-white: #E5E7E0;
   --ph-text-primary: #151515;
   --ph-text-secondary: #757575;
-  --ph-text-muted: #9CA3AF;
-  --ph-text-white: #FFFFFF;
 
-  /* Background Colors - PostHog's warm sage/cream palette */
-  --ph-bg-white: #E5E7E0;
-  --ph-bg-light: #F5F4EF;
-  --ph-bg-gray: #EEEDE9;
-  --ph-bg-dark: #151515;
-  --ph-bg-carpet: #E8D5B7;
-  --ph-bg-card: #FFFFFF;
+  /* ---- Text Colors (Dark Mode Default) ---- */
+  --text-primary: #F5F5F5;
+  --text-secondary: #A3A3A3;
+  --text-muted: #6B6B6B;
+  --text-ghost: rgba(255, 255, 255, 0.4);
 
-  /* Border Colors */
+  /* ---- Border Colors (Dark Mode) ---- */
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.2);
+
+  /* ---- Light Mode Border Colors ---- */
   --ph-border-light: #D4D4CE;
   --ph-border-medium: #BFBFB8;
-  --ph-border-dark: #4B5563;
 
-  /* Spacing */
-  --ph-section-padding: 80px;
-  --ph-container-max-width: 1200px;
-  --ph-container-padding: 0 24px;
+  /* ---- Shadows (Dark) ---- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 16px 40px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-elevated: 0 20px 50px rgba(0, 0, 0, 0.6);
+  --shadow-glow-primary: 0 0 24px rgba(255, 26, 26, 0.15), 0 0 60px rgba(255, 26, 26, 0.05);
+  --shadow-glow-violet: 0 0 24px rgba(139, 92, 246, 0.15), 0 0 60px rgba(139, 92, 246, 0.05);
 
-  /* Typography */
-  --ph-font-primary: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --ph-font-code: 'Source Code Pro', ui-monospace, SFMono-Regular, Menlo, monospace;
+  /* ---- Spacing ---- */
+  --container-max: 1200px;
+  --container-padding: 0 24px;
+  --section-gap: 80px;
 
-  /* Shadows */
-  --ph-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.06);
-  --ph-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
-  --ph-shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --ph-shadow-xl: 0 20px 40px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* ---- Typography ---- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
 
-  /* Transitions */
-  --ph-transition-fast: 150ms ease;
-  --ph-transition-normal: 300ms ease;
+  /* ---- Radius ---- */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-default: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Reset & Base Styles */
+/* ============================================
+   RESET & BASE
+   ============================================ */
 *,
 *::before,
 *::after {
@@ -65,83 +106,97 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  font-family: var(--ph-font-primary);
-  color: var(--ph-text-primary);
-  background-color: var(--ph-bg-white);
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  line-height: 1.6;
 }
 
 #root {
   min-height: 100vh;
 }
 
-/* Scrollbar Styles */
+/* ============================================
+   SCROLLBAR (Dark themed)
+   ============================================ */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--ph-bg-light);
+  background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--ph-border-medium);
+  background: var(--border-strong);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ph-text-muted);
+  background: var(--text-muted);
 }
 
-/* Selection Styles */
+/* ============================================
+   SELECTION
+   ============================================ */
 ::selection {
-  background-color: rgba(108, 71, 255, 0.2);
-  color: var(--ph-text-primary);
+  background-color: rgba(255, 26, 26, 0.25);
+  color: #fff;
 }
 
-/* Link Styles */
+/* ============================================
+   LINKS
+   ============================================ */
 a {
-  color: var(--ph-purple-primary);
+  color: var(--accent-primary);
   text-decoration: none;
-  transition: all var(--ph-transition-fast);
+  transition: all var(--transition-fast);
 }
 
 a:hover {
   opacity: 0.85;
 }
 
-/* Button Base Styles */
+/* ============================================
+   BUTTONS
+   ============================================ */
 button {
   font-family: inherit;
   cursor: pointer;
 }
 
-/* Input Styles */
+/* ============================================
+   INPUTS
+   ============================================ */
 input,
 textarea,
 select {
   font-family: inherit;
-  border: 1px solid var(--ph-border-light);
-  border-radius: 6px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
   padding: 8px 12px;
   outline: none;
-  transition: all var(--ph-transition-fast);
+  transition: all var(--transition-fast);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-  border-color: var(--ph-purple-primary);
-  box-shadow: 0 0 0 3px rgba(108, 71, 255, 0.1);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(255, 26, 26, 0.15);
 }
 
-/* Table Styles */
+/* ============================================
+   TABLES
+   ============================================ */
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -157,33 +212,29 @@ td, th {
   padding: 8px 12px;
 }
 
-/* Image Styles */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Code Block Styles */
+/* ============================================
+   CODE
+   ============================================ */
 code {
-  font-family: var(--ph-font-code);
-  background-color: var(--ph-bg-light);
-  padding: 2px 6px;
-  border-radius: 4px;
+  font-family: var(--font-mono);
+  background-color: var(--bg-tertiary);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
   font-size: 0.875em;
+  color: var(--accent-primary);
 }
 
-/* Utility Classes */
-.text-center {
-  text-align: center;
-}
-
-.text-left {
-  text-align: left;
-}
-
-.text-right {
-  text-align: right;
-}
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
 
 .sr-only {
   position: absolute;
@@ -197,39 +248,29 @@ code {
   border-width: 0;
 }
 
-/* Animation Keyframes */
+/* ============================================
+   ANIMATIONS
+   ============================================ */
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideIn {
-  from {
-    transform: translateX(-20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
 }
 
 @keyframes pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.5;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
-/* Animation Classes */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
 .animate-fade-in {
   animation: fadeIn 0.3s ease forwards;
 }
@@ -238,11 +279,24 @@ code {
   animation: slideIn 0.3s ease forwards;
 }
 
-.animate-pulse {
-  animation: pulse 2s ease infinite;
+/* ============================================
+   REVEAL ANIMATION (scroll-based)
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Print Styles */
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
 @media print {
   * {
     background: transparent !important;
@@ -250,7 +304,7 @@ code {
     box-shadow: none !important;
     text-shadow: none !important;
   }
-  
+
   .ph-navbar,
   .ph-footer,
   button,

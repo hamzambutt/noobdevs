@@ -1,16 +1,15 @@
 /* ============================================
-   MDX WINDOW COMPONENT
+   MDX WINDOW - XP DESKTOP STYLE
    ============================================ */
 
 .mdx-window {
   position: absolute;
   top: 50%;
   left: 50%;
-  /* Transform handles both centering and drag offsets via inline styles */
-  background: var(--ph-bg-card, #ffffff);
-  border: 1px solid var(--ph-border-medium, #BFBFB8);
-  border-radius: 8px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -21,20 +20,20 @@
 }
 
 .mdx-window.dragging {
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5), 0 4px 12px rgba(0, 0, 0, 0.3);
   z-index: 101;
 }
 
 /* Title Bar */
 .mdx-titlebar {
-  background: #EBEAE5;
-  border-bottom: 1px solid var(--ph-border-light, #D4D4CE);
-  height: 38px;
+  background: linear-gradient(180deg, #F0EFE9 0%, #E8E7E2 100%);
+  border-bottom: 1px solid var(--ph-border-light);
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 12px;
-  font-size: 0.85rem;
+  padding: 0 10px;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--ph-text-primary);
   user-select: none;
@@ -56,37 +55,51 @@
 }
 
 .mdx-titlebar-dropdown {
-  font-size: 0.6rem;
+  font-size: 0.55rem;
   opacity: 0.5;
 }
 
 .mdx-titlebar-right {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 4px;
   width: 60px;
   justify-content: flex-end;
-  color: var(--ph-text-secondary);
 }
 
+/* XP-style window controls */
 .mdx-window-control {
+  width: 28px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-size: 0.9rem;
-  line-height: 1;
+  font-size: 0.75rem;
+  color: var(--ph-text-primary);
+  background: linear-gradient(180deg, #FFB6C1 0%, #FF99AA 100%);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  transition: all var(--transition-fast);
 }
 
 .mdx-window-control:hover {
-  color: var(--ph-text-primary);
+  background: linear-gradient(180deg, #FFCDD4 0%, #FFB6C1 100%);
+  box-shadow: 0 0 4px rgba(255, 153, 170, 0.4);
+}
+
+.mdx-window-control:active {
+  background: linear-gradient(180deg, #FF99AA 0%, #FFB6C1 100%);
 }
 
 /* Toolbar */
 .mdx-toolbar {
-  background: #F9F9F8;
-  border-bottom: 1px solid var(--ph-border-light, #D4D4CE);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border-subtle);
   padding: 8px 16px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: nowrap;
   overflow-x: auto;
 }
@@ -109,7 +122,7 @@
   top: 10%;
   height: 80%;
   width: 1px;
-  background: var(--ph-border-light, #D4D4CE);
+  background: var(--border-subtle);
 }
 
 .mdx-toolbar-spacer {
@@ -119,44 +132,44 @@
 .mdx-toolbar-btn {
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: var(--radius-sm);
   width: 28px;
   height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: var(--ph-text-secondary);
-  transition: all 0.1s ease;
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
   font-size: 0.9rem;
 }
 
 .mdx-toolbar-btn:hover {
-  background: rgba(0,0,0,0.05);
-  color: var(--ph-text-primary);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
 }
 
 .mdx-toolbar-btn:active {
-  background: rgba(0,0,0,0.1);
-  transform: translateY(1px);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .mdx-toolbar-select {
-  background: transparent;
-  border: 1px solid var(--ph-border-light, #D4D4CE);
-  border-radius: 4px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
   height: 28px;
   padding: 0 8px;
   display: flex;
   align-items: center;
   gap: 6px;
   cursor: pointer;
-  color: var(--ph-text-secondary);
+  color: var(--text-secondary);
   font-size: 0.8rem;
 }
 
 .mdx-toolbar-select:hover {
-  background: rgba(0,0,0,0.02);
+  background: var(--bg-elevated);
 }
 
 .mdx-toolbar-select span {
@@ -178,5 +191,6 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #ffffff;
+  background: var(--bg-primary);
+  color: var(--text-primary);
 }

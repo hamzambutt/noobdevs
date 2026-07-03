@@ -1,5 +1,10 @@
+/* ============================================
+   PRICING - MODERN DARK SAAS STYLE
+   ============================================ */
+
 .pricing-section {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
+  padding: 80px 24px;
 }
 
 .pricing-grid {
@@ -7,6 +12,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   align-items: start;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 /* --- Pricing Card --- */
@@ -34,7 +41,7 @@
 
 .pricing-card:hover {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--border-strong);
 }
 
@@ -44,8 +51,8 @@
 
 .pricing-card.featured {
   border-color: var(--accent-primary);
-  box-shadow: 0 0 20px rgba(255, 26, 26, 0.15), var(--shadow-elevated);
-  background: linear-gradient(180deg, rgba(255, 26, 26, 0.03) 0%, var(--bg-card) 40%);
+  box-shadow: var(--shadow-glow-primary), var(--shadow-elevated);
+  background: linear-gradient(180deg, rgba(255, 26, 26, 0.04) 0%, var(--bg-card) 40%);
 }
 
 .pricing-card.featured::before {

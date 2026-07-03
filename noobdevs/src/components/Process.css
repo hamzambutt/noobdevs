@@ -1,11 +1,18 @@
+/* ============================================
+   PROCESS - MODERN DARK SAAS STYLE
+   ============================================ */
+
 .process-section {
-  background: var(--bg-primary);
+  background: var(--bg-secondary);
+  padding: 80px 24px;
 }
 
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 /* --- Process Card --- */
@@ -14,7 +21,7 @@
   padding: 36px 28px;
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   transition: all var(--transition-smooth);
   position: relative;
 }
@@ -33,7 +40,7 @@
 
 .process-card:hover {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--border-strong);
 }
 
@@ -53,7 +60,7 @@
   color: var(--accent-primary);
   background: var(--accent-primary-light);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   margin-bottom: 20px;
   transition: all var(--transition-default);
 }

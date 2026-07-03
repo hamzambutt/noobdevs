@@ -1,34 +1,35 @@
-/* === SITE CONTENT - POSTHOG-INSPIRED MODERN SAAS STYLE === */
+/* === SITE CONTENT - MODERN DARK SAAS === */
+
 .site-content {
   width: 100%;
   min-height: 100vh;
-  background: #0d0d0d;
+  background: var(--bg-primary);
   overflow-y: auto;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  color: #fff;
+  font-family: var(--font-sans);
+  color: var(--text-primary);
 }
 
 /* Container */
 .container {
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 24px;
 }
 
 /* Header - Clean & Modern */
 .site-header {
-  background: rgba(13, 13, 13, 0.8);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   padding: 16px 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
@@ -37,7 +38,7 @@
 }
 
 .brand h1 {
-  color: #fff;
+  color: var(--text-primary);
   font-size: 1.3rem;
   margin: 0;
   letter-spacing: -0.5px;
@@ -45,7 +46,7 @@
 }
 
 .tagline {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-ghost);
   font-size: 0.7rem;
   display: block;
   letter-spacing: 0.5px;
@@ -58,20 +59,20 @@
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.875rem;
-  transition: all 0.2s ease;
+  transition: all var(--transition-fast);
   font-weight: 400;
 }
 
 .nav-link:hover {
-  color: #fff;
+  color: var(--text-primary);
 }
 
-/* Hero Section - PostHog Style */
+/* Hero Section */
 .hero-section {
-  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a2e 50%, #0d0d0d 100%);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
   padding: 120px 0 80px;
   text-align: center;
   position: relative;
@@ -86,7 +87,7 @@
   left: -20%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(138, 43, 226, 0.12) 0%, transparent 70%);
   border-radius: 50%;
   animation: floatOrb1 20s ease-in-out infinite;
 }
@@ -98,7 +99,7 @@
   right: -10%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(76, 175, 80, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   animation: floatOrb2 25s ease-in-out infinite;
 }
@@ -124,7 +125,7 @@
 
 .hero-container h2 {
   color: #fff;
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   margin-bottom: 20px;
   line-height: 1.1;
   font-weight: 800;
@@ -139,7 +140,7 @@
 }
 
 .hero-subtitle {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--text-secondary);
   font-size: 1.15rem;
   max-width: 580px;
   margin: 0 auto 40px;
@@ -167,7 +168,7 @@
 }
 
 .stat-label {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-ghost);
   font-size: 0.8rem;
   margin-top: 6px;
   display: block;
@@ -183,7 +184,7 @@
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   color: #fff;
   margin-bottom: 15px;
   font-weight: 700;
@@ -191,17 +192,17 @@
 }
 
 .section-header p {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-secondary);
   max-width: 500px;
   margin: 0 auto;
   font-size: 1rem;
   line-height: 1.6;
 }
 
-/* Projects Section - Modern Cards */
+/* Projects Section */
 .projects-section {
   padding: 80px 0;
-  background: #0d0d0d;
+  background: var(--bg-primary);
 }
 
 .projects-grid {
@@ -211,11 +212,11 @@
 }
 
 .project-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
   padding: 28px;
-  transition: all 0.3s ease;
+  transition: all var(--transition-smooth);
   position: relative;
   overflow: hidden;
 }
@@ -252,8 +253,8 @@
   align-items: center;
   justify-content: center;
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 12px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
 }
 
 .project-meta {
@@ -264,7 +265,7 @@
 }
 
 .project-classification {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-ghost);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -314,7 +315,7 @@
 }
 
 .project-description {
-  color: rgba(255, 255, 255, 0.45);
+  color: var(--text-secondary);
   font-size: 0.875rem;
   line-height: 1.65;
   margin-bottom: 18px;
@@ -330,14 +331,14 @@
 .spec-box {
   background: rgba(255, 255, 255, 0.03);
   padding: 10px;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.04);
   text-align: center;
 }
 
 .spec-label {
   display: block;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-ghost);
   font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -360,21 +361,21 @@
 
 .tech-tag {
   background: rgba(255, 255, 255, 0.05);
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-secondary);
   padding: 4px 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-md);
   font-size: 0.7rem;
   font-weight: 500;
 }
 
-/* About Section - Modern */
+/* About Section */
 .about-section {
   padding: 80px 0;
-  background: linear-gradient(180deg, #0d0d0d 0%, #1a1a2e 50%, #0d0d0d 100%);
+  background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
 }
 
 .about-text h2 {
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   color: #fff;
   margin-bottom: 24px;
   font-weight: 700;
@@ -383,7 +384,7 @@
 }
 
 .about-text p {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: 16px;
   max-width: 700px;
@@ -401,9 +402,9 @@
   text-align: center;
   padding: 32px 24px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 16px;
-  transition: all 0.3s ease;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  transition: all var(--transition-smooth);
 }
 
 .value-item:hover {
@@ -425,17 +426,17 @@
 }
 
 .value-item p {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-secondary);
   font-size: 0.875rem;
   max-width: 100%;
   line-height: 1.6;
 }
 
-/* Contact Section - Modern */
+/* Contact Section */
 .contact-section {
   padding: 80px 0;
-  background: #0d0d0d;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .contact-content {
@@ -446,14 +447,14 @@
 
 .contact-content h2 {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
   margin-bottom: 12px;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
 
 .contact-content > p {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-secondary);
   margin-bottom: 40px;
   font-size: 1rem;
 }
@@ -468,11 +469,11 @@
 .contact-card {
   background: rgba(255, 255, 255, 0.03);
   padding: 28px;
-  border-radius: 16px;
+  border-radius: var(--radius-xl);
   text-decoration: none;
   min-width: 170px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.3s ease;
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-smooth);
 }
 
 .contact-card:hover {
@@ -495,20 +496,20 @@
 }
 
 .contact-card p {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-secondary);
   font-size: 0.8rem;
 }
 
 /* Footer */
 .site-footer {
-  background: #0d0d0d;
+  background: var(--bg-primary);
   padding: 30px 0;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-top: 1px solid var(--border-subtle);
 }
 
 .site-footer p {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--text-ghost);
   font-size: 0.8rem;
 }
 
@@ -526,22 +527,22 @@
   }
 
   .hero-container h2 {
-    font-size: 2.2rem;
+    font-size: clamp(2rem, 6vw, 2.5rem);
   }
-  
+
   .hero-stats {
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .projects-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .about-values {
     grid-template-columns: 1fr;
   }
-  
+
   .project-specs {
     grid-template-columns: repeat(2, 1fr);
   }

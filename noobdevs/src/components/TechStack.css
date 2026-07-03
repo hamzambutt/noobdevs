@@ -1,18 +1,25 @@
+/* ============================================
+   TECH STACK - MODERN DARK SAAS STYLE
+   ============================================ */
+
 .techstack {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
+  padding: 80px 24px;
 }
 
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 /* --- Tech Category Card --- */
 .tech-category {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: 28px;
   transition: all var(--transition-smooth);
   position: relative;
@@ -33,7 +40,7 @@
 
 .tech-category:hover {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   border-color: var(--border-strong);
 }
 
@@ -53,17 +60,17 @@
 .tech-items {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .tech-badge {
   font-family: var(--font-mono) !important;
   font-size: 0.75rem;
-  padding: 5px 12px;
+  padding: 6px 12px;
   background: var(--bg-tertiary);
   color: var(--text-secondary);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-sm);
+  border-radius: var(--radius-md);
   font-weight: 500;
   transition: all var(--transition-default);
 }

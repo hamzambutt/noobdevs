@@ -1,21 +1,22 @@
-/* === XP DESKTOP === */
+/* === XP DESKTOP - IMPROVED BLISS WALLPAPER === */
+
 .xp-desktop {
   position: relative;
   width: 100%;
   height: calc(100vh - 36px);
   background: linear-gradient(180deg, 
     #245EDC 0%, 
-    #3A8FDB 20%, 
-    #5BAFEB 40%, 
-    #7BC96B 65%, 
-    #5BAF6B 80%, 
+    #3A8FDB 15%, 
+    #5BAFEB 30%, 
+    #7BC96B 55%, 
+    #5BAF6B 70%, 
     #3D8C4F 100%
   );
   overflow: hidden;
   animation: desktopAppear 0.5s ease-out;
 }
 
-/* Bliss Wallpaper Gradient Overlay */
+/* Bliss Wallpaper Enhancement */
 .xp-desktop::before {
   content: '';
   position: absolute;
@@ -24,13 +25,14 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(ellipse at 30% 20%, rgba(135, 206, 235, 0.3) 0%, transparent 50%),
+    radial-gradient(ellipse at 35% 25%, rgba(135, 206, 235, 0.2) 0%, transparent 45%),
+    radial-gradient(ellipse at 70% 15%, rgba(255, 255, 255, 0.08) 0%, transparent 30%),
     linear-gradient(180deg, 
       #245EDC 0%, 
-      #3A8FDB 20%, 
-      #5BAFEB 40%, 
-      #7BC96B 65%, 
-      #5BAF6B 80%, 
+      #3A8FDB 15%, 
+      #5BAFEB 30%, 
+      #7BC96B 55%, 
+      #5BAF6B 70%, 
       #3D8C4F 100%
     );
   z-index: -1;
@@ -43,7 +45,7 @@
   left: 15px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   z-index: 10;
 }
 
@@ -55,28 +57,29 @@
   padding: 8px 12px;
   border-radius: 3px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all var(--transition-fast);
   width: 85px;
 }
 
 .desktop-icon:hover {
-  background: rgba(11, 36, 106, 0.4);
+  background: rgba(60, 90, 170, 0.45);
+  outline: 1px solid rgba(100, 140, 230, 0.4);
 }
 
 .desktop-icon:active {
-  background: rgba(11, 36, 106, 0.6);
+  background: rgba(60, 90, 170, 0.6);
 }
 
 .icon-wrapper {
   font-size: 2.5rem;
-  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
 }
 
 .icon-label {
   color: #fff;
   font-size: 0.7rem;
   text-align: center;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9), 0 0 5px rgba(0, 0, 0, 0.6);
   line-height: 1.3;
   word-wrap: break-word;
   max-width: 85px;
@@ -89,13 +92,13 @@
   left: 0;
   right: 0;
   height: 36px;
-  background: linear-gradient(180deg, #D1D7E4, #A9BDD2);
-  border-top: 1px solid #fff;
+  background: linear-gradient(180deg, #D1D7E4 0%, #BFC9DB 50%, #A9BDD2 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
   display: flex;
   align-items: center;
   padding: 0 2px;
   z-index: 500;
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
 .taskbar-left {
@@ -105,13 +108,13 @@
   height: 100%;
 }
 
-/* Start Button */
+/* Start Button - Classic Green */
 .start-button {
   height: 28px;
-  background: linear-gradient(180deg, #3C8F3C, #276B27);
+  background: linear-gradient(180deg, #3C9A3C 0%, #2D7B2D 50%, #1F5A1F 100%);
   border: none;
   border-radius: 0 4px 4px 0;
-  padding: 0 10px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -119,17 +122,17 @@
   color: #fff;
   font-weight: bold;
   font-size: 12px;
-  letter-spacing: 3px;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 2px rgba(0,0,0,0.2);
-  transition: all 0.1s ease;
+  letter-spacing: 1.5px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.3), 0 1px 3px rgba(0,0,0,0.2);
+  transition: all var(--transition-fast);
 }
 
 .start-button:hover {
-  background: linear-gradient(180deg, #4CA84C, #357B35);
+  background: linear-gradient(180deg, #4CA84C 0%, #3D8B3D 50%, #2F6A2F 100%);
 }
 
 .start-button:active {
-  background: linear-gradient(180deg, #2D6F2D, #1F5A1F);
+  background: linear-gradient(180deg, #2D6F2D 0%, #1F5A1F 100%);
 }
 
 .windows-logo {
@@ -138,6 +141,7 @@
 
 .start-text {
   letter-spacing: 1.5px;
+  font-style: italic;
 }
 
 /* Quick Launch */
@@ -145,7 +149,7 @@
   display: flex;
   align-items: center;
   padding: 0 6px;
-  border-left: 1px solid #8F9EA9;
+  border-left: 1px solid rgba(0, 0, 0, 0.15);
   height: 24px;
 }
 
@@ -154,11 +158,11 @@
   cursor: pointer;
   padding: 2px;
   border-radius: 3px;
-  transition: background 0.2s ease;
+  transition: background var(--transition-fast);
 }
 
 .quick-icon:hover {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 /* Task Items */
@@ -172,7 +176,7 @@
 }
 
 .task-item {
-  background: linear-gradient(180deg, #D4E6F7, #A8C4DE);
+  background: linear-gradient(180deg, #D4E6F7 0%, #B8CDE6 100%);
   border: none;
   border-radius: 2px;
   padding: 3px 8px;
@@ -181,16 +185,16 @@
   align-items: center;
   gap: 5px;
   cursor: pointer;
-  font-size: 11px;
+  font-size: 10px;
   color: #000;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5);
-  transition: all 0.1s ease;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4);
+  transition: all var(--transition-fast);
   max-width: 180px;
 }
 
 .task-item.active {
-  background: linear-gradient(180deg, #9BAFCA, #7B9BB5);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2);
+  background: linear-gradient(180deg, #8FA3C0 0%, #7B9BB5 100%);
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.25);
 }
 
 .task-item:hover {
@@ -198,7 +202,7 @@
 }
 
 .task-icon {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* System Tray */
@@ -208,15 +212,15 @@
   gap: 6px;
   padding: 0 8px;
   height: 100%;
-  background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(0,0,0,0.05));
-  border-left: 1px solid #8F9EA9;
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(0,0,0,0.04));
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .tray-icon {
   font-size: 0.8rem;
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s ease;
+  opacity: 0.65;
+  transition: opacity var(--transition-fast);
 }
 
 .tray-icon:hover {
@@ -224,11 +228,12 @@
 }
 
 .clock {
-  font-size: 11px;
+  font-size: 10px;
   color: #000;
   padding: 3px 6px;
   cursor: default;
   white-space: nowrap;
+  font-weight: 500;
 }
 
 /* Start Menu */
@@ -242,7 +247,7 @@
   border-radius: 5px 5px 0 0;
   display: none;
   z-index: 600;
-  box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px -3px 12px rgba(0, 0, 0, 0.3);
 }
 
 .start-menu:hover {
@@ -287,7 +292,7 @@
   padding: 7px 10px;
   cursor: pointer;
   border-radius: 3px;
-  transition: background 0.15s ease;
+  transition: background var(--transition-fast);
 }
 
 .start-item:hover {

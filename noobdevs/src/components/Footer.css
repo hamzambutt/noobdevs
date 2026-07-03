@@ -1,235 +1,125 @@
-/* ============================================================
-   FOOTER — Terminal Style Footer
-   ============================================================ */
+/* ============================================
+   FOOTER - MODERN DARK SAAS STYLE
+   ============================================ */
 
 .footer {
-  background: var(--bg-terminal);
-  border-top: 1px solid rgba(51, 255, 51, 0.15);
-  padding: 60px 0 30px;
-  position: relative;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  padding: 48px 24px;
 }
 
-.footer-container {
-  max-width: 1400px;
+.footer-content {
+  max-width: var(--container-max);
   margin: 0 auto;
-  padding: 0 32px;
-}
-
-/* Terminal Header for Footer */
-.footer-terminal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 16px;
-  background: #1a1a2e;
-  border: 1px solid rgba(51, 255, 51, 0.15);
-  border-radius: 6px;
-  margin-bottom: 40px;
-}
-
-.terminal-controls {
-  display: flex;
-  gap: 8px;
-}
-
-.control-btn {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.control-btn.close { background: #ff5f56; border: 1px solid #e0443e; }
-.control-btn.minimize { background: #ffbd2e; border: 1px solid #dea723; }
-.control-btn.maximize { background: #27c93f; border: 1px solid #1aab29; }
-
-.terminal-titlebar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-muted);
-  font-size: 0.75rem;
-  font-family: var(--font-mono);
-}
-
-.title-icon {
-  color: var(--term-green);
-  font-size: 1rem;
-}
-
-/* Main Footer Content */
-.footer-main {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
-/* Brand Column */
-.brand-col {
-  padding-right: 20px;
-}
-
-.footer-logo {
+.footer-brand h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
-  text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--term-green);
-  margin-bottom: 16px;
 }
 
-.logo-prompt {
-  color: var(--term-green);
-  font-size: 1.2rem;
-  text-shadow: 0 0 8px var(--term-green-glow);
-}
-
-.brand-desc {
-  font-family: var(--font-android);
-  font-size: 0.875rem;
+.footer-brand p {
   color: var(--text-secondary);
+  font-size: 0.875rem;
   line-height: 1.6;
-  margin-bottom: 20px;
+  max-width: 280px;
 }
 
-.social-links {
+.footer-links h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-links li a {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-links li a:hover {
+  color: var(--accent-primary);
+}
+
+.footer-bottom {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding-top: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.footer-bottom p {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.footer-socials {
   display: flex;
   gap: 12px;
 }
 
-.social-link {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 6px 12px;
-  border: 1px solid rgba(51, 255, 51, 0.15);
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.social-link:hover {
-  color: var(--term-green);
-  border-color: var(--term-green);
-  background: rgba(51, 255, 51, 0.08);
-}
-
-/* Footer Columns */
-.footer-cols {
-  display: contents;
-}
-
-.footer-col h4 {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--term-green);
-  margin-bottom: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-col li {
-  margin-bottom: 8px;
-}
-
-.footer-col a {
-  font-family: var(--font-android);
-  font-size: 0.875rem;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: all 0.2s ease;
-}
-
-.footer-col a:hover {
-  color: var(--term-green);
-  padding-left: 4px;
-}
-
-/* Bottom Bar */
-.footer-bottom {
+.footer-social-link {
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-top: 24px;
-  border-top: 1px solid rgba(51, 255, 51, 0.1);
+  justify-content: center;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  transition: all var(--transition-fast);
 }
 
-.footer-status {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  color: var(--term-green);
-}
-
-.status-dot {
-  width: 6px;
-  height: 6px;
-  background: var(--term-green);
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 4px var(--term-green-glow); }
-  50% { opacity: 0.5; box-shadow: none; }
-}
-
-.copyright {
-  font-family: var(--font-mono);
-  font-size: 0.6875rem;
-  color: var(--text-muted);
+.footer-social-link:hover {
+  background: var(--accent-primary-light);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateY(-2px);
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .footer-main {
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-  }
-  
-  .brand-col {
-    grid-column: span 2;
-  }
-}
-
 @media (max-width: 768px) {
-  .footer {
-    padding: 40px 0 20px;
-  }
-  
-  .footer-container {
-    padding: 0 16px;
-  }
-  
-  .footer-main {
-    grid-template-columns: 1fr;
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-  }
-  
-  .brand-col {
-    grid-column: span 1;
   }
   
   .footer-bottom {
     flex-direction: column;
-    gap: 16px;
-    text-align: center;
+    align-items: center;
   }
-  
-  .footer-terminal-header {
-    padding: 8px 12px;
+}
+
+@media (max-width: 480px) {
+  .footer-content {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,18 +1,25 @@
+/* ============================================
+   PROJECTS - MODERN DARK SAAS STYLE
+   ============================================ */
+
 .projects-section {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
+  padding: 80px 24px;
 }
 
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  max-width: var(--container-max);
+  margin: 0 auto;
 }
 
 /* --- Project Card --- */
 .project-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xl);
   padding: 32px;
   transition: all var(--transition-smooth);
   position: relative;
@@ -33,7 +40,7 @@
 
 .project-card:hover {
   box-shadow: var(--shadow-card-hover);
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   border-color: var(--border-strong);
 }
 
@@ -50,13 +57,13 @@
   font-size: 1.375rem;
   background: var(--bg-tertiary);
   border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   margin-bottom: 20px;
   transition: all var(--transition-default);
 }
 
 .project-card:hover .project-icon {
-  box-shadow: 0 0 16px rgba(255, 26, 26, 0.15);
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.15);
   border-color: var(--border-strong);
 }
 
@@ -103,8 +110,8 @@
 }
 
 .tech-tag:hover {
-  border-color: var(--border-strong);
-  color: var(--text-primary);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
 }
 
 /* Responsive */

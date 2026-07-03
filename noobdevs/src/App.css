@@ -2,10 +2,10 @@
    POSTHOG-INSPIRED UNIFIED DESKTOP DESIGN SYSTEM
    ============================================ */
 
-/* Desktop Site Container */
+/* Desktop Site Container (OS Mode) */
 .desktop-site {
   min-height: 100vh;
-  background-color: #E6E4DD; /* Warm beige/grey Posthog background */
+  background-color: #E6E4DD;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
   display: flex;
   flex-direction: column;
@@ -14,13 +14,16 @@
 }
 
 /* ============================================
-   POSTHOG-STYLE NAVBAR
+   POSTHOG-STYLE NAVBAR (OS Mode)
    ============================================ */
 .ph-navbar {
   position: relative;
   z-index: 1000;
-  background: transparent;
-  padding: 12px 24px;
+  background: rgba(238, 237, 233, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--ph-border-light);
+  padding: 10px 24px;
 }
 
 .ph-navbar-content {
@@ -37,8 +40,8 @@
 }
 
 .ph-logo {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--ph-text-primary);
   text-decoration: none;
   display: flex;
@@ -47,21 +50,21 @@
 }
 
 .ph-logo-icon {
-  width: 24px;
-  height: 24px;
-  background: var(--ph-text-primary);
-  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  background: #F54E00;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #E6E4DD;
+  color: white;
   font-weight: bold;
-  font-size: 0.7rem;
+  font-size: 0.85rem;
 }
 
 .ph-nav-menu {
   display: flex;
-  gap: 8px;
+  gap: 2px;
   list-style: none;
 }
 
@@ -76,7 +79,7 @@
   font-weight: 500;
   padding: 6px 10px;
   border-radius: 4px;
-  transition: all var(--ph-transition-fast);
+  transition: all var(--transition-fast);
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -94,28 +97,22 @@
 }
 
 .ph-btn-cta {
-  background-color: var(--ph-orange-cta);
-  color: var(--ph-text-white);
+  background-color: #F54E00;
+  color: white;
   padding: 8px 16px;
   border-radius: 6px;
   font-weight: 600;
   font-size: 0.85rem;
   text-decoration: none;
-  transition: all var(--ph-transition-fast);
+  transition: all var(--transition-fast);
   border: none;
   cursor: pointer;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
 }
 
 .ph-btn-cta:hover {
-  background-color: var(--ph-orange-hover);
+  background-color: #E04500;
   transform: translateY(-1px);
-  border-bottom-width: 3px;
-}
-
-.ph-btn-cta:active {
-  transform: translateY(1px);
-  border-bottom-width: 1px;
+  box-shadow: 0 4px 12px rgba(245, 78, 0, 0.3);
 }
 
 .ph-navbar-icon {
@@ -126,12 +123,12 @@
   justify-content: center;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color var(--transition-fast);
   color: var(--ph-text-secondary);
 }
 
 .ph-navbar-icon:hover {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   color: var(--ph-text-primary);
 }
 
@@ -158,7 +155,7 @@
 }
 
 .desktop-sidebar-right {
-  width: 120px; /* Slightly wider for longer text */
+  width: 120px;
 }
 
 .sidebar-icon {
@@ -168,14 +165,14 @@
   gap: 6px;
   text-decoration: none;
   padding: 8px;
-  border-radius: 8px;
-  transition: all 0.2s;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-default);
   cursor: pointer;
   width: 100%;
 }
 
 .sidebar-icon:hover {
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 .sidebar-icon-img {
@@ -185,8 +182,7 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  /* Add subtle shadow to icons to make them pop against background */
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .sidebar-icon-label {
@@ -208,45 +204,45 @@
 }
 
 /* ============================================
-   HERO / CONTENT SPECIFIC (Overrides for MDX Window)
+   HERO OVERRIDES (OS Mode)
    ============================================ */
-.ph-hero {
+.os-mode .ph-hero {
   padding: 40px 48px;
-  text-align: left; /* Posthog aligns text to left in this view */
-}
-
-.ph-hero-headline {
   text-align: left;
-  font-size: 2.8rem;
 }
 
-.ph-hero-subtitle {
+.os-mode .ph-hero-headline {
+  text-align: left;
+  font-size: 2.5rem;
+}
+
+.os-mode .ph-hero-subtitle {
   text-align: left;
   margin-left: 0;
   max-width: 600px;
   font-size: 1.05rem;
 }
 
-.ph-hero-cta-group {
+.os-mode .ph-hero-cta-group {
   justify-content: flex-start;
 }
 
-.ph-install-command {
+.os-mode .ph-install-command {
   margin-left: 0;
   margin-right: auto;
 }
 
-/* Hide some sections that don't belong in the home.mdx view */
 .os-mode .ph-footer {
   display: none;
 }
 
 /* ============================================
-   SEAMLESS WEBSITE MODE
+   WEBSITE MODE (Dark Mode)
    ============================================ */
 .website-mode-container {
   min-height: 100vh;
-  background-color: var(--ph-bg-main, #FDFDF8);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
 }
@@ -254,7 +250,24 @@
 .website-main {
   flex: 1;
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: 40px 24px;
+}
+
+/* ============================================
+   RESPONSIVE (OS Mode)
+   ============================================ */
+@media (max-width: 768px) {
+  .desktop-sidebar {
+    display: none;
+  }
+
+  .ph-navbar-left {
+    gap: 16px;
+  }
+
+  .ph-nav-menu {
+    display: none;
+  }
 }
