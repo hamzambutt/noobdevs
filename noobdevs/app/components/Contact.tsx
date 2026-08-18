@@ -108,7 +108,7 @@ export default function Contact() {
                       <polyline points="22,6 12,13 2,6" />
                     </svg>
                   </span>
-                  hello@noobdevs.com
+                  hello@noobdevs.studio
                 </a>
 
                 <div className="flex items-center gap-3 text-sm text-slate-500">
