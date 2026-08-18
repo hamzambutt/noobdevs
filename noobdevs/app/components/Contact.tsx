@@ -17,16 +17,30 @@ export default function Contact() {
     ) =>
       setForm((f) => ({ ...f, [key]: e.target.value }));
 
-  const onSubmit = (e: React.FormEvent) => {
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(
-      `Project inquiry from ${form.name || "your website"}`,
-    );
-    const body = encodeURIComponent(
-      `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`,
-    );
-    window.location.href = `mailto:hello@noobdevs.com?subject=${subject}&body=${body}`;
-    setSent(true);
+    
+    const formData = new FormData(e.target as HTMLFormElement);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: json
+      });
+      const result = await response.json();
+      if (result.success) {
+        setSent(true);
+        setForm({ name: "", email: "", message: "" });
+      }
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   useEffect(() => {
@@ -117,7 +131,10 @@ export default function Contact() {
               </div>
             </div>
 
-            <form onSubmit={onSubmit} className="space-y-4">
+            <form onSubmit={onSubmit} action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
+              <input type="hidden" name="access_key" value="1e1b18e7-8ca8-4955-a4c5-efa09bc8ce7c" />
+              <input type="hidden" name="subject" value="New Lead from NoobDevs Studio!" />
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: 'none' }} />
               <div>
                 <label
                   htmlFor="name"
@@ -127,6 +144,7 @@ export default function Contact() {
                 </label>
                 <input
                   id="name"
+                  name="name"
                   type="text"
                   required
                   placeholder="Your name"
@@ -145,6 +163,7 @@ export default function Contact() {
                 </label>
                 <input
                   id="email"
+                  name="email"
                   type="email"
                   required
                   placeholder="you@company.com"
@@ -163,6 +182,7 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={4}
                   required
                   placeholder="Tell us about your project..."
@@ -176,7 +196,7 @@ export default function Contact() {
                 type="submit"
                 className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-r from-red-600 via-rose-600 to-red-600 bg-[length:200%_auto] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-red-600/25 transition-all duration-300 hover:bg-right hover:-translate-y-0.5 hover:shadow-xl hover:shadow-red-600/35 active:translate-y-0"
               >
-                {sent ? "Message prepared" : "Send message"}
+                {sent ? "Message sent!" : "Send message"}
                 <svg
                   viewBox="0 0 24 24"
                   className="h-4 w-4"
