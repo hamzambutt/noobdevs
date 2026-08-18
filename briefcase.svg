@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#fcfcfc" />
+  
+  <g stroke="#3a3a3a" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Left Arm (Holding Briefcase) -->
+    <path d="M 98 100 Q 85 140 76 175 M 102 101 Q 88 140 78 175" stroke-width="1.5" />
+    
+    <!-- Right Arm (Waving) -->
+    <path d="M 102 100 Q 120 108 140 105 L 160 55 M 100 102 Q 122 104 140 107 L 158 56" stroke-width="1.5" />
+    
+    <!-- Waving Hand -->
+    <path d="M 160 55 C 152 40, 168 30, 175 42 C 180 50, 165 62, 158 56 M 159 54 C 153 41, 167 32, 173 41" stroke-width="1.2" />
+
+    <!-- Legs -->
+    <path d="M 100 230 Q 90 280 85 340 M 102 230 Q 93 280 87 340" stroke-width="1.5" />
+    <path d="M 100 230 Q 110 280 115 340 M 98 230 Q 107 280 113 340" stroke-width="1.5" />
+
+    <!-- Feet -->
+    <path d="M 72 340 Q 80 338 88 341 M 73 341 Q 80 342 87 340" stroke-width="1.5" />
+    <path d="M 112 340 Q 120 338 128 341 M 113 341 Q 120 342 127 340" stroke-width="1.5" />
+    
+    <!-- Body -->
+    <path d="M 100 80 Q 98 150 100 230 M 102 80 Q 102 150 101 230 M 98 80 Q 100 150 99 230" stroke-width="1.2" />
+
+    <!-- Briefcase Handle -->
+    <path d="M 70 185 L 70 175 L 84 175 L 84 185 M 71 185 L 71 176 L 83 176 L 83 185" stroke-width="1.2" />
+    
+    <!-- Briefcase Body -->
+    <rect x="62" y="185" width="24" height="65" fill="#f0ad73" stroke="none" />
+    <path d="M 62 185 L 86 185 L 86 250 L 62 250 Z M 63 187 L 85 187 M 63 248 L 85 248" stroke-width="1.5" />
+    <!-- Briefcase vertical lines/texture -->
+    <path d="M 66 185 L 66 250 M 70 185 L 70 250 M 74 185 L 74 250 M 78 185 L 78 250 M 82 185 L 82 250" stroke-width="1" />
+
+    <!-- Head Fill and Sketchy Outline -->
+    <circle cx="100" cy="50" r="28" fill="#fcf7b1" stroke="none" />
+    <path d="M 128 50 A 28 28 0 1 1 127.9 49 A 27.5 28.5 0 1 1 127.8" stroke-width="1.5" />
+
+    <!-- Eyes -->
+    <ellipse cx="90" cy="45" rx="3.5" ry="4.5" fill="#666" stroke="none" />
+    <ellipse cx="106" cy="45" rx="3.5" ry="4.5" fill="#666" stroke="none" />
+    
+    <!-- Eyebrows -->
+    <path d="M 85 36 Q 90 33 95 37 M 86 35 Q 90 32 94 36" stroke-width="1" />
+    <path d="M 101 37 Q 106 33 111 36 M 102 36 Q 106 32 110 35" stroke-width="1" />
+
+    <!-- Mouth -->
+    <path d="M 86 62 Q 98 68 112 60 M 87 63 Q 98 69 111 61" stroke-width="1.5" />
+
+    <!-- Bow Tie -->
+    <path d="M 100 82 L 82 72 L 85 92 Z M 100 82 L 83 74 L 85 90 Z" fill="#ffc2c2" stroke-width="1.2" />
+    <path d="M 100 82 L 118 74 L 115 90 Z M 100 82 L 117 76 L 114 88 Z" fill="#ffc2c2" stroke-width="1.2" />
+    <circle cx="100" cy="82" r="3" fill="#ffc2c2" stroke-width="1.2" />
+
+    <!-- Ground / Horizon Lines -->
+    <path d="M 50 355 L 140 355 M 52 356 L 138 356 M 150 355 L 165 355 M 152 356 L 163 356 M 172 355 L 175 355" stroke-width="1.5" />
+
+  </g>
+</svg>
