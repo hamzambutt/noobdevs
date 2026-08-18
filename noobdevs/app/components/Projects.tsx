@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { projects, type Project } from "../data/projects";
 import { Reveal } from "../lib/ui";
+import ProjectsDudes from "./ProjectsDudes";
 
 const categories = ["All", "AI / ML", "DevOps & Cloud", "Full-Stack"] as const;
 
@@ -147,12 +148,15 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl px-6">
         <div
           id="projects-card"
-          className={`relative overflow-hidden rounded-3xl border bg-white p-8 sm:p-12 md:p-16 transition-all duration-700 ${
+          className={`relative rounded-3xl border bg-white p-8 sm:p-12 md:p-16 transition-all duration-700 ${
             isLit
               ? "border-red-400/90 shadow-[0_0_40px_-5px_rgba(239,68,68,0.22)] ring-1 ring-red-400/40"
               : "border-slate-200 shadow-xs"
           }`}
         >
+          {/* Animated Stickmen: Phone Scroller on Left & Busy Desk Worker on Right */}
+          <ProjectsDudes />
+
           {/* Top docking beacon */}
           <div
             className={`absolute left-1/2 top-0 h-1.5 w-12 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-red-500 to-transparent transition-opacity duration-700 ${

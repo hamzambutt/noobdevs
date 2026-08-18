@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import { team } from "../data/team";
 import { Reveal } from "../lib/ui";
+import TeamDudes from "./TeamDudes";
+import { TeamEmoteAvatar } from "./TeamEmotes";
 
 export default function Team() {
   const [isLit, setIsLit] = useState(false);
@@ -25,12 +27,15 @@ export default function Team() {
       <div className="mx-auto max-w-6xl px-6">
         <div
           id="team-card"
-          className={`relative overflow-hidden rounded-3xl border bg-white p-8 sm:p-12 md:p-16 transition-all duration-700 ${
+          className={`relative rounded-3xl border bg-white p-8 sm:p-12 md:p-16 transition-all duration-700 ${
             isLit
               ? "border-red-400/90 shadow-[0_0_40px_-5px_rgba(239,68,68,0.22)] ring-1 ring-red-400/40"
               : "border-slate-200 shadow-xs"
           }`}
         >
+          {/* Animated Poster Stickmen: "MEET THE" on left & "TEAM" on right */}
+          <TeamDudes />
+
           {/* Top docking beacon */}
           <div
             className={`absolute left-1/2 top-0 h-1.5 w-12 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-red-500 to-transparent transition-opacity duration-700 ${
@@ -68,9 +73,9 @@ export default function Team() {
 
                   <div className="flex items-center justify-between">
                     <div
-                      className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${m.gradient} text-xl font-bold text-white shadow-md shadow-red-500/20 transition-transform duration-300 group-hover:scale-105`}
+                      className={`flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br ${m.gradient} shadow-md shadow-red-500/20 transition-transform duration-300 group-hover:scale-110`}
                     >
-                      {m.initials}
+                      <TeamEmoteAvatar index={i} />
                     </div>
                     <span className="flex h-2 w-2 rounded-full bg-slate-200 transition-colors duration-300 group-hover:bg-red-500" />
                   </div>

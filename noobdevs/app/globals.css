@@ -82,6 +82,88 @@ body {
   }
 }
 
+/* ---------- Sitting SVG Dudes Animations ---------- */
+@keyframes hairBlow {
+  0%, 100% {
+    transform: rotate(0deg) skewX(0deg);
+  }
+  25% {
+    transform: rotate(10deg) skewX(8deg) scaleY(0.96);
+  }
+  55% {
+    transform: rotate(22deg) skewX(16deg) scaleY(1.04);
+  }
+  80% {
+    transform: rotate(8deg) skewX(6deg);
+  }
+}
+
+@keyframes legSwingA {
+  0%, 100% {
+    transform: rotate(-18deg);
+  }
+  50% {
+    transform: rotate(22deg);
+  }
+}
+
+@keyframes legSwingB {
+  0%, 100% {
+    transform: rotate(20deg);
+  }
+  50% {
+    transform: rotate(-16deg);
+  }
+}
+
+@keyframes headBob {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(3deg);
+  }
+}
+
+@keyframes armWave {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-22deg);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+  75% {
+    transform: rotate(-18deg);
+  }
+}
+
+.hair-blow-1 { transform-origin: 38px 18px; animation: hairBlow 2.2s ease-in-out infinite; }
+.hair-blow-2 { transform-origin: 40px 16px; animation: hairBlow 1.9s ease-in-out infinite 0.3s; }
+.hair-blow-3 { transform-origin: 38px 16px; animation: hairBlow 2.5s ease-in-out infinite 0.6s; }
+.hair-blow-4 { transform-origin: 42px 16px; animation: hairBlow 2.0s ease-in-out infinite; }
+.hair-blow-5 { transform-origin: 42px 16px; animation: hairBlow 2.3s ease-in-out infinite 0.4s; }
+.hair-blow-6 { transform-origin: 41px 16px; animation: hairBlow 1.8s ease-in-out infinite 0.2s; }
+
+.leg-swing-a1 { transform-origin: 47px 68px; animation: legSwingA 2.4s ease-in-out infinite; }
+.leg-swing-b1 { transform-origin: 44px 68px; animation: legSwingB 2.8s ease-in-out infinite 0.4s; }
+.leg-swing-a2 { transform-origin: 42px 68px; animation: legSwingA 2.6s ease-in-out infinite 0.2s; }
+.leg-swing-b2 { transform-origin: 48px 68px; animation: legSwingB 3.1s ease-in-out infinite; }
+.leg-swing-a3 { transform-origin: 44px 68px; animation: legSwingA 2.2s ease-in-out infinite 0.5s; }
+.leg-swing-b3 { transform-origin: 38px 68px; animation: legSwingB 3.4s ease-in-out infinite 0.1s; }
+
+.leg-swing-a4 { transform-origin: 38px 68px; animation: legSwingA 1.6s ease-in-out infinite 0.4s; }
+.leg-swing-b4 { transform-origin: 32px 68px; animation: legSwingB 1.6s ease-in-out infinite; }
+.leg-swing-a5 { transform-origin: 31px 68px; animation: legSwingA 2.5s ease-in-out infinite 0.3s; }
+.leg-swing-b5 { transform-origin: 37px 68px; animation: legSwingB 2.9s ease-in-out infinite 0.7s; }
+.leg-swing-a6 { transform-origin: 35px 68px; animation: legSwingA 2.0s ease-in-out infinite 0.1s; }
+.leg-swing-b6 { transform-origin: 41px 68px; animation: legSwingB 2.3s ease-in-out infinite 0.6s; }
+
+.head-bob-4 { transform-origin: 40px 22px; animation: headBob 1.6s ease-in-out infinite; }
+.arm-wave-5 { transform-origin: 39px 44px; animation: armWave 2.4s ease-in-out infinite; }
+
 /* ---------- animation utilities ---------- */
 .animate-fade-up {
   opacity: 0;

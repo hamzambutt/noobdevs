@@ -121,7 +121,6 @@ export default function PageScrollLine() {
 
   // Update strokeDashoffset on scroll for each segment
   useEffect(() => {
-    // Initialize dasharray and offsets
     segments.forEach((seg) => {
       const path = segmentRefs.current[seg.id];
       if (path) {

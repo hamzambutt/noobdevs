@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import ContactDudes from "./ContactDudes";
+import GoodbyeDudes from "./GoodbyeDudes";
 
 const inputClass =
   "w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 transition focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-100";
@@ -63,12 +65,18 @@ export default function Contact() {
       <div className="mx-auto max-w-6xl px-6">
         <div
           id="contact-card"
-          className={`relative overflow-hidden rounded-3xl border bg-white p-8 sm:p-12 md:p-16 transition-all duration-700 ${
+          className={`relative rounded-3xl border bg-white p-8 sm:p-12 md:p-16 pb-28 sm:pb-32 md:pb-36 transition-all duration-700 ${
             isLit
               ? "border-red-400/90 shadow-[0_0_40px_-5px_rgba(239,68,68,0.25)] ring-1 ring-red-400/40"
               : "border-slate-200 shadow-xs"
           }`}
         >
+          {/* Animated Stickmen: Stressed Phone guy, Falling Papers guy, and Landline guy */}
+          <ContactDudes />
+
+          {/* 6 Goodbye Stickmen Waving at bottom border */}
+          <GoodbyeDudes />
+
           {/* Subtle top indicator glow dot where line docks */}
           <div
             className={`absolute left-1/2 top-0 h-1.5 w-12 -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-red-500 to-transparent transition-opacity duration-700 ${

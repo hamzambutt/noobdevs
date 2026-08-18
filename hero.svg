@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 400" width="100%" height="100%">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#fcfcfc" />
+
+  <g stroke="#333333" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    
+    <!-- Cape Inner Red Shading (Crayon/Pencil Effect) -->
+    <path d="M 115 103 C 78 113, 48 103, 25 98 C 21 130, 24 160, 27 190 C 62 195, 88 158, 115 128" stroke="#e05a5a" stroke-width="6" opacity="0.6" />
+    <path d="M 112 106 C 78 116, 50 106, 28 101 C 24 130, 27 158, 30 186 C 62 191, 88 155, 112 125" stroke="#e05a5a" stroke-width="4" opacity="0.5" />
+    <path d="M 109 109 C 78 119, 52 109, 31 104 C 27 130, 30 156, 33 182 C 62 187, 88 152, 109 122" stroke="#e05a5a" stroke-width="3" opacity="0.4" />
+    
+    <!-- Cape Inner Scribbles -->
+    <path d="M 25 100 L 35 180 M 30 105 L 45 185 M 35 110 L 55 188 M 40 112 L 65 185 M 50 115 L 75 180 M 60 118 L 85 175 M 70 120 L 95 165 M 80 122 L 105 155 M 90 124 L 110 145" stroke="#e05a5a" stroke-width="1.5" opacity="0.5" />
+
+    <!-- Cape Sketchy Outline -->
+    <path d="M 118 100 C 80 110, 50 100, 20 95 C 15 130, 18 160, 22 195 C 60 200, 90 160, 118 125" stroke-width="1.5" />
+    <path d="M 119 101 C 80 111, 50 101, 21 96 C 16 130, 19 160, 23 194 C 60 199, 90 161, 117 126" stroke-width="1" />
+
+    
+    
+    <!-- Head Sketchy Outline -->
+    <path d="M 145 70 A 25 25 0 1 1 144.9 " stroke-width="1.5" />
+    <path d="M 144 70 A 24 24 0 1 1 143.9 69 A 23.5 24.5 0 1 1 143.8 " stroke-width="1" />
+
+    <!-- Hair Tufts -->
+    <path d="M 115 45 Q 120 36 125 43 M 116 45 Q 120 37 124 43" stroke-width="1.2" />
+    <path d="M 120 44 Q 127 35 132 41 M 121 44 Q 127 36 131 41" stroke-width="1.2" />
+
+    <!-- Eyes (Outer ovals and inner pupils) -->
+    <ellipse cx="112" cy="62" rx="3.5" ry="4.5" stroke-width="1.2" />
+    <ellipse cx="112" cy="63" rx="1.5" ry="2" fill="#333333" stroke="none" />
+    <ellipse cx="126" cy="62" rx="3.5" ry="4.5" stroke-width="1.2" />
+    <ellipse cx="126" cy="63" rx="1.5" ry="2" fill="#333333" stroke="none" />
+
+    <!-- Smiling Mouth -->
+    <path d="M 103 72 Q 119 82 135 72" stroke-width="1.5" />
+    <path d="M 104 73 Q 119 83 134 73" stroke-width="1" />
+
+    <!-- Torso -->
+    <path d="M 120 95 L 119 230 M 121 95 L 121 230" stroke-width="1.2" />
+
+    <!-- Left Arm & Hand on Hip -->
+    <path d="M 120 105 L 85 170 L 110 210 M 121 105 L 87 170 L 112 210" stroke-width="1.2" />
+    <path d="M 110 210 C 100 215, 102 230, 114 220" stroke-width="1.5" />
+
+    <!-- Right Arm & Hand -->
+    <path d="M 120 105 L 140 220 M 121 105 L 141 220" stroke-width="1.2" />
+    <path d="M 140 220 C 135 232, 148 232, 142 220" stroke-width="1.5" />
+
+    <!-- Legs -->
+    <path d="M 119 230 L 99 340 M 121 230 L 101 340" stroke-width="1.2" />
+    <path d="M 119 230 L 139 340 M 121 230 L 141 340" stroke-width="1.2" />
+
+    <!-- Feet (Filled to overlap legs cleanly) -->
+    <path d="M 92 340 C 92 335, 108 335, 108 340 Z" fill="#fcfcfc" stroke-width="1.5" />
+    <path d="M 132 340 C 132 335, 148 335, 148 340 Z" fill="#fcfcfc" stroke-width="1.5" />
+
+    <!-- Ground / Shadow Lines -->
+    <path d="M 70 345 L 85 345 M 95 345 L 125 345 M 135 345 L 165 345 M 170 345 L 175 345" stroke-width="1.5" />
+    <path d="M 72 346 L 83 346 M 97 346 L 123 346 M 137 346 L 163 346" stroke-width="1" />
+
+  </g>
+</svg>
