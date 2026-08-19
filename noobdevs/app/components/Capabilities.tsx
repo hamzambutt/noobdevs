@@ -70,7 +70,7 @@ export default function Capabilities() {
   }, []);
 
   return (
-    <section id="capabilities" className="relative scroll-mt-24 py-20 md:py-28 overflow-hidden">
+    <section id="capabilities" className="relative scroll-mt-24 py-20 md:py-28 overflow-visible">
       {/* ── LEFT FLANK: PC Tower, Rubber Duck, Pizza, Coffee Chemex ── */}
       <div
         aria-hidden="true"

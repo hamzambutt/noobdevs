@@ -23,7 +23,7 @@ export default function Team() {
   }, []);
 
   return (
-    <section id="team" className="relative scroll-mt-24 py-20 md:py-28 overflow-hidden">
+    <section id="team" className="relative scroll-mt-24 py-20 md:py-28 overflow-visible">
       {/* ── LEFT FLANK: Hanging Ivy Plant, Perched Birds & Filing Cabinet ── */}
       <div
         aria-hidden="true"

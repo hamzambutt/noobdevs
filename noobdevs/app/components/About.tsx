@@ -60,7 +60,7 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="relative scroll-mt-24 py-20 md:py-28 overflow-hidden">
+    <section id="about" className="relative scroll-mt-24 py-20 md:py-28 overflow-visible">
       {/* ── LEFT FLANK: CPU AI Chip, Potted Monstera & Perched Chirping Bird ── */}
       <div
         aria-hidden="true"

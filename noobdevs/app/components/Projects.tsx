@@ -144,7 +144,7 @@ export default function Projects() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="relative scroll-mt-24 py-20 md:py-28 overflow-hidden">
+    <section id="projects" className="relative scroll-mt-24 py-20 md:py-28 overflow-visible">
       {/* ── LEFT FLANK: 🐱 Cat Stretching & Bug, Potted Succulent, Discman ── */}
       <div
         aria-hidden="true"

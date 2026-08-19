@@ -61,7 +61,7 @@ export default function Contact() {
   }, []);
 
   return (
-    <section id="contact" className="relative scroll-mt-24 py-24 md:py-32 overflow-hidden">
+    <section id="contact" className="relative scroll-mt-24 py-24 md:py-32 overflow-visible">
       {/* ── LEFT FLANK BACKGROUND DOODLES (Plants, Carrier Bird, Sleepy Cat) ── */}
       <div
         aria-hidden="true"

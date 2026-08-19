@@ -10,7 +10,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="relative z-10 border-t border-slate-200/80 bg-transparent overflow-hidden">
+    <footer className="relative z-10 border-t border-slate-200/80 bg-transparent overflow-visible">
       {/* Footer Left Flank: Seagulls, Reeds/Plants, Paw Prints */}
       <div
         aria-hidden="true"

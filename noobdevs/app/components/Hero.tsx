@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="top" className="relative pt-24 md:pt-36 pb-20 overflow-hidden">
+    <section id="top" className="relative pt-24 md:pt-36 pb-20 overflow-visible">
       {/* ── LEFT FLANK: Monitor with Sleeping Cat, Coffee Steam & Plant ── */}
       <div
         aria-hidden="true"
