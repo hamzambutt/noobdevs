@@ -6,7 +6,7 @@ export default function SittingDudes() {
   return (
     <div
       aria-hidden="true"
-      className="pointer-events-none absolute -top-[68px] inset-x-0 z-20 flex justify-between px-1 sm:px-4 md:px-8 select-none"
+      className="pointer-events-none absolute -top-[68px] inset-x-0 z-20 flex justify-between px-2 sm:px-4 md:px-8 select-none"
     >
       {/* Embedded SVG keyframe styles for smooth hardware-accelerated animations */}
       <style>{`
@@ -56,10 +56,10 @@ export default function SittingDudes() {
         .d-arm-5 { transform-origin: 39px 44px; animation: dudeArmWave 2.4s ease-in-out infinite; }
       `}</style>
 
-      {/* LEFT SITTING DUDES (3 Dudes on left of the central line) */}
-      <div className="flex items-end justify-end gap-3 sm:gap-6 md:gap-10 pr-6 sm:pr-10 md:pr-14 flex-1">
-        {/* Dude 1: Coder with Laptop (2 eyes, short hair, red power dot) */}
-        <div className="relative transform scale-90 sm:scale-100 transition-transform">
+      {/* LEFT SITTING DUDES (1 on mobile, 3 on desktop) */}
+      <div className="flex items-end justify-end gap-2 sm:gap-6 md:gap-10 pr-3 sm:pr-8 md:pr-14 flex-1">
+        {/* Dude 1: Coder with Laptop (2 eyes, short hair, red power dot) - VISIBLE ON MOBILE */}
+        <div className="relative block transform scale-85 sm:scale-90 md:scale-100 transition-transform origin-bottom-right">
           <svg
             className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible"
             viewBox="0 0 80 110"
@@ -112,8 +112,8 @@ export default function SittingDudes() {
           </svg>
         </div>
 
-        {/* Dude 2: AI Engineer with Red Specs & Coffee */}
-        <div className="relative transform scale-90 sm:scale-100 transition-transform">
+        {/* Dude 2: AI Engineer with Red Specs & Coffee (Hidden on mobile) */}
+        <div className="relative hidden md:block transform scale-85 sm:scale-90 md:scale-100 transition-transform origin-bottom-right">
           <svg
             className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible"
             viewBox="0 0 80 110"
@@ -171,8 +171,8 @@ export default function SittingDudes() {
           </svg>
         </div>
 
-        {/* Dude 3: Lounging Thinker leaning on arm (2 eyes, short hair, red wristband) */}
-        <div className="relative transform scale-90 sm:scale-100 transition-transform">
+        {/* Dude 3: Lounging Thinker leaning on arm (Hidden on mobile) */}
+        <div className="relative hidden md:block transform scale-85 sm:scale-90 md:scale-100 transition-transform origin-bottom-right">
           <svg
             className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible"
             viewBox="0 0 80 110"
@@ -225,10 +225,10 @@ export default function SittingDudes() {
         </div>
       </div>
 
-      {/* RIGHT SITTING DUDES (3 Dudes on right of the central line) */}
-      <div className="flex items-end justify-start gap-3 sm:gap-6 md:gap-10 pl-6 sm:pl-10 md:pl-14 flex-1">
-        {/* Dude 4: DevOps with Red Headphones (2 eyes, short hair) */}
-        <div className="relative transform scale-90 sm:scale-100 transition-transform">
+      {/* RIGHT SITTING DUDES (1 on mobile, 3 on desktop) */}
+      <div className="flex items-end justify-start gap-2 sm:gap-6 md:gap-10 pl-3 sm:pl-8 md:pr-14 flex-1">
+        {/* Dude 4: DevOps with Red Headphones (Hidden on mobile) */}
+        <div className="relative hidden md:block transform scale-85 sm:scale-90 md:scale-100 transition-transform origin-bottom-left">
           <svg
             className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible"
             viewBox="0 0 80 110"
@@ -284,8 +284,8 @@ export default function SittingDudes() {
           </svg>
         </div>
 
-        {/* Dude 5: Cheerful Waving Stickman (2 eyes, short hair, red bowtie) */}
-        <div className="relative transform scale-90 sm:scale-100 transition-transform">
+        {/* Dude 5: Cheerful Waving Stickman (2 eyes, short hair, red bowtie) - VISIBLE ON MOBILE */}
+        <div className="relative block transform scale-85 sm:scale-90 md:scale-100 transition-transform origin-bottom-left">
           <svg
             className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible"
             viewBox="0 0 80 110"
@@ -343,8 +343,8 @@ export default function SittingDudes() {
           </svg>
         </div>
 
-        {/* Dude 6: Foot-kicking Chill Dev (2 eyes, short hair, red sneaker soles) */}
-        <div className="relative transform scale-90 sm:scale-100 transition-transform">
+        {/* Dude 6: Foot-kicking Chill Dev (Hidden on mobile) */}
+        <div className="relative hidden md:block transform scale-85 sm:scale-90 md:scale-100 transition-transform origin-bottom-left">
           <svg
             className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible"
             viewBox="0 0 80 110"
