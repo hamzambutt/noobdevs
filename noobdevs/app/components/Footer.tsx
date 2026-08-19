@@ -69,9 +69,7 @@ export default function Footer() {
       </div>
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 py-10 sm:flex-row">
         <a href="#top" className="flex items-center gap-2.5 group">
-          <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-slate-200/80 bg-white p-1 shadow-sm transition-transform duration-300 group-hover:scale-105 group-hover:border-red-200">
-            <BrandLogo className="h-full w-full" />
-          </div>
+          <BrandLogo className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" />
           <span className="text-[15px] font-bold tracking-tight text-slate-900">
             Noob
             <span className="bg-gradient-to-r from-red-600 to-rose-600 bg-clip-text text-transparent">
