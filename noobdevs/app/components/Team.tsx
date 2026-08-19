@@ -23,8 +23,105 @@ export default function Team() {
   }, []);
 
   return (
-    <section id="team" className="scroll-mt-24 py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="team" className="relative scroll-mt-24 py-20 md:py-28 overflow-hidden">
+      {/* ── LEFT FLANK: Hanging Ivy Plant, Perched Birds & Filing Cabinet ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute left-2 xl:left-6 2xl:left-14 top-1/2 -translate-y-1/2 w-64 xl:w-76 z-0 opacity-[0.095] hover:opacity-[0.22] transition-opacity duration-500 hidden lg:block text-slate-800"
+      >
+        <svg viewBox="0 0 240 320" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+          {/* Hanging Planter with Cascading Ivy Vines */}
+          <g transform="translate(40, 15)">
+            <line x1="30" y1="0" x2="30" y2="35" strokeWidth="1.4" />
+            <polygon points="12,35 48,35 40,55 20,55" fill="#fff" strokeWidth="1.8" />
+            {/* Vines spilling down */}
+            <path d="M 20 45 Q 8 65 14 85 Q 22 105 16 125" strokeWidth="1.8" stroke="#22c55e" />
+            <path d="M 30 50 Q 38 75 32 100 Q 25 120 30 140" strokeWidth="1.8" stroke="#22c55e" />
+            <path d="M 40 45 Q 52 70 46 95 Q 40 115 48 135" strokeWidth="1.8" stroke="#22c55e" />
+            {/* Leaves on vines */}
+            <ellipse cx="14" cy="70" rx="4" ry="2.5" fill="#fff" stroke="#22c55e" strokeWidth="1.2" />
+            <ellipse cx="34" cy="80" rx="4" ry="2.5" fill="#fff" stroke="#22c55e" strokeWidth="1.2" />
+            <ellipse cx="48" cy="85" rx="4" ry="2.5" fill="#fff" stroke="#22c55e" strokeWidth="1.2" />
+            <ellipse cx="16" cy="110" rx="4" ry="2.5" fill="#fff" stroke="#22c55e" strokeWidth="1.2" />
+            <ellipse cx="30" cy="125" rx="4" ry="2.5" fill="#fff" stroke="#22c55e" strokeWidth="1.2" />
+
+            {/* 🐦 Bird perched on the hanging rim */}
+            <g transform="translate(44, 20)">
+              <ellipse cx="12" cy="12" rx="7" ry="5" fill="#fff" strokeWidth="1.4" />
+              <circle cx="18" cy="8" r="4" fill="#fff" strokeWidth="1.3" />
+              <polygon points="22,7 26,9 22,11" fill="#ef4444" stroke="#ef4444" strokeWidth="1" />
+              <circle cx="19" cy="7" r="1" fill="currentColor" />
+              <path d="M 8 10 Q 12 8 14 14" strokeWidth="1.2" stroke="#ef4444" />
+              <text x="28" y="6" fontSize="10" fill="#ef4444" stroke="none">♪</text>
+            </g>
+          </g>
+
+          {/* Tiny Stickman pulling giant plug */}
+          <g transform="translate(25, 170)">
+            <circle cx="30" cy="40" r="5.5" fill="#fff" strokeWidth="1.6" />
+            <path d="M 28 42 Q 30 40 32 42" strokeWidth="1" />
+            <line x1="30" y1="46" x2="38" y2="70" strokeWidth="2.2" />
+            <path d="M 34 52 L 48 50 M 34 56 L 46 54" strokeWidth="2" />
+            <path d="M 38 70 L 24 88 M 38 70 L 48 88" strokeWidth="2.2" />
+            <line x1="18" y1="88" x2="26" y2="88" stroke="#ef4444" strokeWidth="2.8" />
+            <line x1="44" y1="88" x2="52" y2="88" stroke="#ef4444" strokeWidth="2.8" />
+            <g transform="translate(48, 38)">
+              <rect x="0" y="0" width="24" height="22" rx="3" fill="#fff" strokeWidth="1.8" stroke="#ef4444" />
+              <rect x="24" y="3" width="10" height="3" rx="0.5" fill="currentColor" strokeWidth="1" />
+              <rect x="24" y="15" width="10" height="3" rx="0.5" fill="currentColor" strokeWidth="1" />
+              <path d="M 0 11 C -20 11, -30 35, -50 35" strokeWidth="3.5" stroke="#ef4444" />
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      {/* ── RIGHT FLANK: Cat in Box, Seagulls & Potted Plant ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute right-2 xl:right-6 2xl:right-14 top-1/2 -translate-y-1/2 w-64 xl:w-76 z-0 opacity-[0.095] hover:opacity-[0.22] transition-opacity duration-500 hidden lg:block text-slate-800"
+      >
+        <svg viewBox="0 0 240 320" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+          {/* Flying Seagulls */}
+          <g transform="translate(30, 20)">
+            <path d="M 20 20 Q 32 10 42 18 Q 52 10 65 20" strokeWidth="2" stroke="#ef4444" />
+            <path d="M 68 32 Q 76 25 84 30 Q 92 25 100 32" strokeWidth="1.6" />
+          </g>
+
+          {/* 🐱 Cat in Cardboard Delivery Box */}
+          <g transform="translate(50, 75)">
+            <rect x="0" y="24" width="56" height="34" rx="2" fill="#fff" strokeWidth="1.8" />
+            <polygon points="0,24 -8,12 12,24" fill="#fff" strokeWidth="1.4" />
+            <polygon points="56,24 64,12 44,24" fill="#fff" strokeWidth="1.4" />
+            <rect x="18" y="38" width="20" height="12" rx="1" stroke="#ef4444" strokeWidth="1" fill="currentColor" fillOpacity="0.05" />
+            <ellipse cx="28" cy="20" rx="14" ry="12" fill="#fff" strokeWidth="1.6" />
+            <polygon points="17,12 20,4 25,10" fill="#ef4444" stroke="#ef4444" strokeWidth="1.2" />
+            <polygon points="31,10 36,4 39,12" fill="#ef4444" stroke="#ef4444" strokeWidth="1.2" />
+            <circle cx="22" cy="18" r="2" fill="currentColor" />
+            <circle cx="34" cy="18" r="2" fill="currentColor" />
+            <ellipse cx="18" cy="24" rx="4" ry="2.5" fill="#fff" strokeWidth="1.2" />
+            <ellipse cx="38" cy="24" rx="4" ry="2.5" fill="#fff" strokeWidth="1.2" />
+          </g>
+
+          {/* 🌿 Potted Bonsai Tree with Leafy Canopy & Perched Bird */}
+          <g transform="translate(60, 170)">
+            <path d="M 40 90 Q 45 65 35 50 Q 28 35 36 20" strokeWidth="2.5" />
+            <ellipse cx="36" cy="16" rx="22" ry="12" fill="#fff" strokeWidth="1.6" />
+            <ellipse cx="58" cy="38" rx="14" ry="9" fill="#fff" strokeWidth="1.5" />
+            <ellipse cx="40" cy="92" rx="24" ry="6" strokeWidth="1.8" fill="#fff" />
+            <path d="M 18 92 L 22 102 L 58 102 L 62 92" strokeWidth="1.6" />
+
+            {/* 🐦 Bird on bonsai branch */}
+            <g transform="translate(54, 24)">
+              <ellipse cx="10" cy="10" rx="6" ry="4" fill="#fff" strokeWidth="1.3" />
+              <circle cx="15" cy="7" r="3.5" fill="#fff" strokeWidth="1.2" />
+              <polygon points="18,6 22,8 18,9" fill="#ef4444" stroke="#ef4444" strokeWidth="0.8" />
+              <text x="24" y="6" fontSize="9" fill="#ef4444" stroke="none">♪</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-6 relative z-10">
         <div
           id="team-card"
           className={`relative rounded-3xl border bg-white p-8 sm:p-12 md:p-16 transition-all duration-700 ${

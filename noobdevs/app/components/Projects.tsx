@@ -144,8 +144,104 @@ export default function Projects() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="projects" className="scroll-mt-24 py-20 md:py-28">
-      <div className="mx-auto max-w-6xl px-6">
+    <section id="projects" className="relative scroll-mt-24 py-20 md:py-28 overflow-hidden">
+      {/* ── LEFT FLANK: 🐱 Cat Stretching & Bug, Potted Succulent, Discman ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute left-2 xl:left-6 2xl:left-14 top-1/2 -translate-y-1/2 w-64 xl:w-76 z-0 opacity-[0.095] hover:opacity-[0.22] transition-opacity duration-500 hidden lg:block text-slate-800"
+      >
+        <svg viewBox="0 0 240 320" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+          {/* 🐱 Stretching Cat */}
+          <g transform="translate(25, 20)">
+            <path d="M 20 50 L 5 50" strokeWidth="2" />
+            <path d="M 20 46 L 8 46" strokeWidth="2" />
+            <circle cx="26" cy="42" r="8" fill="#fff" strokeWidth="1.6" />
+            <polygon points="22,35 24,28 28,34" fill="#ef4444" stroke="#ef4444" strokeWidth="1.2" />
+            <polygon points="28,34 32,28 34,35" fill="#ef4444" stroke="#ef4444" strokeWidth="1.2" />
+            <circle cx="23" cy="41" r="1" fill="currentColor" />
+            <path d="M 32 40 Q 45 25 65 30 Q 75 35 70 50" strokeWidth="2" fill="#fff" />
+            <path d="M 68 30 Q 74 10 70 5" strokeWidth="2.2" stroke="#ef4444" />
+          </g>
+
+          {/* 🐛 Debugging Bug */}
+          <g transform="translate(95, 20)">
+            <ellipse cx="20" cy="20" rx="5" ry="7" fill="#ef4444" stroke="#dc2626" strokeWidth="1.4" />
+            <path d="M 18 16 Q 8 8 16 4 Q 22 10 20 16" fill="currentColor" fillOpacity="0.1" strokeWidth="1.2" />
+            <path d="M 22 16 Q 32 8 24 4 Q 18 10 20 16" fill="currentColor" fillOpacity="0.1" strokeWidth="1.2" />
+          </g>
+
+          {/* 🌿 Potted Desk Succulent with Perched Bird */}
+          <g transform="translate(45, 120)">
+            <polygon points="15,65 45,65 50,45 10,45" fill="#fff" strokeWidth="1.8" />
+            <line x1="6" y1="45" x2="54" y2="45" strokeWidth="2.2" />
+            <path d="M 30 45 Q 20 25 30 10 Q 40 25 30 45" fill="#fff" strokeWidth="1.6" />
+            <path d="M 30 35 Q 15 25 18 18 Q 28 24 30 35" fill="#fff" strokeWidth="1.4" stroke="#22c55e" />
+            <path d="M 30 35 Q 45 25 42 18 Q 32 24 30 35" fill="#fff" strokeWidth="1.4" stroke="#22c55e" />
+
+            {/* 🐦 Bird on leaf */}
+            <g transform="translate(38, 2)">
+              <ellipse cx="10" cy="10" rx="6" ry="4" fill="#fff" strokeWidth="1.3" />
+              <circle cx="15" cy="7" r="3.5" fill="#fff" strokeWidth="1.2" />
+              <polygon points="18,6 22,8 18,9" fill="#ef4444" stroke="#ef4444" strokeWidth="0.8" />
+              <text x="24" y="6" fontSize="9" fill="#ef4444" stroke="none">♪</text>
+            </g>
+          </g>
+
+          {/* CD in jewel case & floating notes */}
+          <g transform="translate(30, 220)">
+            <rect x="0" y="0" width="55" height="50" rx="3" fill="#fff" strokeWidth="1.8" />
+            <circle cx="28" cy="25" r="18" strokeWidth="1.5" stroke="#ef4444" />
+            <circle cx="28" cy="25" r="5" fill="#ef4444" />
+            <text x="68" y="24" fontSize="14" fill="#ef4444" stroke="none">♪</text>
+            <text x="78" y="44" fontSize="12" fill="currentColor" stroke="none">♫</text>
+          </g>
+        </svg>
+      </div>
+
+      {/* ── RIGHT FLANK: 🕊️ Flock of Birds, Bonsai Tree & Discman ── */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute right-2 xl:right-6 2xl:right-14 top-1/2 -translate-y-1/2 w-64 xl:w-76 z-0 opacity-[0.095] hover:opacity-[0.22] transition-opacity duration-500 hidden lg:block text-slate-800"
+      >
+        <svg viewBox="0 0 240 320" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+          {/* Flock of Birds flying */}
+          <g transform="translate(30, 15)">
+            <path d="M 10 15 Q 20 6 28 14 Q 36 6 46 15" strokeWidth="2" stroke="#ef4444" />
+            <path d="M 55 24 Q 63 17 70 23 Q 77 17 85 24" strokeWidth="1.6" />
+            <path d="M 35 34 Q 41 29 47 33 Q 53 29 59 34" strokeWidth="1.3" opacity="0.8" />
+            <path d="M 80 40 Q 86 36 91 39 Q 96 36 102 40" strokeWidth="1.2" opacity="0.7" />
+          </g>
+
+          {/* 🌿 Bonsai Tree with Leafy Canopy & Perched Bird */}
+          <g transform="translate(45, 75)">
+            <path d="M 40 85 Q 45 60 35 45 Q 28 30 36 15" strokeWidth="2.5" />
+            <ellipse cx="36" cy="12" rx="22" ry="12" fill="#fff" strokeWidth="1.6" />
+            <ellipse cx="58" cy="34" rx="14" ry="9" fill="#fff" strokeWidth="1.5" />
+            <ellipse cx="40" cy="88" rx="24" ry="6" strokeWidth="1.8" fill="#fff" />
+            <path d="M 18 88 L 22 98 L 58 98 L 62 88" strokeWidth="1.6" />
+
+            {/* 🐦 Bird on branch */}
+            <g transform="translate(54, 20)">
+              <ellipse cx="10" cy="10" rx="6" ry="4" fill="#fff" strokeWidth="1.3" />
+              <circle cx="15" cy="7" r="3.5" fill="#fff" strokeWidth="1.2" />
+              <polygon points="18,6 22,8 18,9" fill="#ef4444" stroke="#ef4444" strokeWidth="0.8" />
+              <text x="24" y="6" fontSize="9" fill="#ef4444" stroke="none">♪</text>
+            </g>
+          </g>
+
+          {/* 💿 Discman with headphones */}
+          <g transform="translate(45, 205)">
+            <circle cx="45" cy="45" r="38" strokeWidth="2" fill="#fff" />
+            <circle cx="45" cy="45" r="26" strokeWidth="1.4" stroke="#ef4444" strokeDasharray="3 3" />
+            <circle cx="45" cy="45" r="8" fill="#ef4444" />
+            <rect x="22" y="14" width="24" height="10" rx="2" fill="currentColor" fillOpacity="0.08" strokeWidth="1" />
+            <text x="25" y="21" fontSize="6" fontWeight="bold" fill="currentColor" stroke="none">TR 04</text>
+            <circle cx="68" cy="20" r="3.5" strokeWidth="1.2" stroke="#ef4444" />
+          </g>
+        </svg>
+      </div>
+
+      <div className="mx-auto max-w-6xl px-6 relative z-10">
         <div
           id="projects-card"
           className={`relative rounded-3xl border bg-white p-8 sm:p-12 md:p-16 transition-all duration-700 ${

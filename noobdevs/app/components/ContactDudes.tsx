@@ -119,35 +119,39 @@ export default function ContactDudes() {
                 {/* Head */}
                 <circle cx="40" cy="18" r="9.5" fill="#ffffff" stroke="#262626" strokeWidth="1.8" />
 
+                {/* Stressed eyebrows */}
+                <path d="M 34.5 14.5 L 37.5 15.5" stroke="#262626" strokeWidth="1.1" />
+                <path d="M 42.5 15.5 L 39.5 14.5" stroke="#262626" strokeWidth="1.1" />
+
                 {/* TWO WIDE STRESSED EYES */}
-                <circle cx="37" cy="17" r="1.5" fill="#262626" />
-                <circle cx="43" cy="17" r="1.5" fill="#262626" />
+                <circle cx="36" cy="17" r="1.4" fill="#262626" />
+                <circle cx="41" cy="17" r="1.4" fill="#262626" />
                 {/* Stressed wavy mouth */}
-                <path d="M 36 23 Q 39 21 41 24 Q 43 21 45 23" stroke="#262626" strokeWidth="1.3" fill="none" />
+                <path d="M 36 23 Q 38.5 21 40 23.5 Q 41.5 21 43 23" stroke="#262626" strokeWidth="1.3" fill="none" />
 
                 {/* Flying sweat drop */}
                 <g className="sweat-drop-1">
-                  <path d="M 48 13 Q 52 11 50 15 Q 48 15 48 13 Z" fill="#38bdf8" stroke="#0284c7" strokeWidth="0.8" />
+                  <path d="M 53 11 Q 57 9 55 13 Q 53 13 53 11 Z" fill="#38bdf8" stroke="#0284c7" strokeWidth="0.8" />
                 </g>
 
                 {/* Torso */}
                 <path d="M 40 27.5 L 39 52" stroke="#262626" strokeWidth="2.4" />
 
                 {/* Right arm holding smartphone to ear */}
-                <path d="M 39 34 L 46 32 L 44 20" stroke="#262626" strokeWidth="2.2" />
-                {/* Red Smartphone */}
+                <path d="M 39 34 L 47 33 L 48.5 20.5" stroke="#262626" strokeWidth="2.2" />
+                {/* Red Smartphone against ear */}
                 <rect
-                  x="43"
-                  y="14"
+                  x="47.5"
+                  y="13"
                   width="4.5"
-                  height="10"
+                  height="10.5"
                   rx="1.2"
                   fill="#ef4444"
                   stroke="#dc2626"
                   strokeWidth="1"
-                  transform="rotate(8 43 14)"
+                  transform="rotate(6 47.5 13)"
                 />
-                <circle cx="44.5" cy="20" r="2.2" fill="#ef4444" stroke="#262626" strokeWidth="1" />
+                <circle cx="48.5" cy="20.5" r="2.2" fill="#ef4444" stroke="#262626" strokeWidth="1" />
 
                 {/* Left arm flailing in stress */}
                 <g className="stress-flail">
