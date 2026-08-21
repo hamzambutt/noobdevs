@@ -52,11 +52,11 @@ export default function GoodbyeDudes() {
       {/* 6 DUDES STANDING & WAVING GOODBYE FLUSH ON BOTTOM BORDER OF CONTACT CARD */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 inset-x-0 z-20 flex justify-center items-end px-4 select-none"
+        className="pointer-events-none absolute bottom-0 inset-x-0 z-20 flex justify-center items-end px-1 sm:px-4 select-none"
       >
-        <div className="goodbye-group-bob relative flex items-end justify-center gap-1 sm:gap-4 md:gap-8 max-w-4xl w-full">
-          {/* ── DUDE 1: HARD HAT BUILDER WAVING ── */}
-          <div className="relative transform scale-90 sm:scale-100">
+        <div className="goodbye-group-bob relative flex items-end justify-between gap-1 sm:gap-4 md:gap-8 max-w-4xl w-full">
+          {/* ── DUDE 1: HARD HAT BUILDER WAVING (always visible) ── */}
+          <div className="relative transform scale-75 sm:scale-90 md:scale-100 origin-bottom-left">
             <svg className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible" viewBox="0 0 70 70" fill="none">
               <g strokeLinecap="round" strokeLinejoin="round">
                 {/* Head */}
@@ -94,8 +94,8 @@ export default function GoodbyeDudes() {
             </svg>
           </div>
 
-          {/* ── DUDE 2: DEVOPS WITH RED HEADPHONES WAVING PEACE ✌️ ── */}
-          <div className="relative transform scale-90 sm:scale-100">
+          {/* ── DUDE 2: DEVOPS WITH RED HEADPHONES WAVING PEACE ✌️ (hidden on mobile) ── */}
+          <div className="relative hidden sm:block transform scale-90 sm:scale-100">
             <svg className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible" viewBox="0 0 70 70" fill="none">
               <g strokeLinecap="round" strokeLinejoin="round">
                 {/* Spiky hair */}
@@ -135,8 +135,8 @@ export default function GoodbyeDudes() {
             </svg>
           </div>
 
-          {/* ── DUDE 3: RED GLASSES & COFFEE TOAST ☕ ── */}
-          <div className="relative transform scale-90 sm:scale-100">
+          {/* ── DUDE 3: RED GLASSES & COFFEE TOAST ☕ (hidden on mobile) ── */}
+          <div className="relative hidden sm:block transform scale-90 sm:scale-100">
             <svg className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible" viewBox="0 0 70 70" fill="none">
               <g strokeLinecap="round" strokeLinejoin="round">
                 {/* Hair */}
@@ -174,8 +174,8 @@ export default function GoodbyeDudes() {
             </svg>
           </div>
 
-          {/* ── DUDE 4: RED BOWTIE WAVING BOTH ARMS WITH HEARTS 💕 ── */}
-          <div className="relative transform scale-90 sm:scale-100">
+          {/* ── DUDE 4: RED BOWTIE WAVING BOTH ARMS WITH HEARTS 💕 (hidden on mobile) ── */}
+          <div className="relative hidden sm:block transform scale-90 sm:scale-100">
             <svg className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible" viewBox="0 0 70 70" fill="none">
               <g strokeLinecap="round" strokeLinejoin="round">
                 {/* Floating Heart */}
@@ -221,8 +221,8 @@ export default function GoodbyeDudes() {
             </svg>
           </div>
 
-          {/* ── DUDE 5: PHONE IN HAND WAVING ── */}
-          <div className="relative transform scale-90 sm:scale-100">
+          {/* ── DUDE 5: PHONE IN HAND WAVING (hidden on mobile) ── */}
+          <div className="relative hidden sm:block transform scale-90 sm:scale-100">
             <svg className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible" viewBox="0 0 70 70" fill="none">
               <g strokeLinecap="round" strokeLinejoin="round">
                 {/* Hair */}
@@ -255,8 +255,8 @@ export default function GoodbyeDudes() {
             </svg>
           </div>
 
-          {/* ── DUDE 6: CHILL DEV WAVING HIGH ── */}
-          <div className="relative transform scale-90 sm:scale-100">
+          {/* ── DUDE 6: CHILL DEV WAVING HIGH (always visible) ── */}
+          <div className="relative transform scale-75 sm:scale-90 md:scale-100 origin-bottom-right">
             <svg className="w-16 h-24 sm:w-20 sm:h-28 overflow-visible" viewBox="0 0 70 70" fill="none">
               <g strokeLinecap="round" strokeLinejoin="round">
                 {/* Hair */}

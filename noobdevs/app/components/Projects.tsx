@@ -5,7 +5,7 @@ import { projects, type Project } from "../data/projects";
 import { Reveal } from "../lib/ui";
 import ProjectsDudes from "./ProjectsDudes";
 
-const categories = ["All", "AI / ML", "DevOps & Cloud", "Full-Stack"] as const;
+const categories = ["All", "AI / ML", "DevOps & Cloud", "Full-Stack", "OSINT"] as const;
 
 function VideoPlayerCard({ project }: { project: Project }) {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -29,14 +29,25 @@ function VideoPlayerCard({ project }: { project: Project }) {
       {/* Video Viewport */}
       <div className="relative aspect-video w-full overflow-hidden bg-slate-950 text-white">
         {project.videoUrl ? (
-          <video
-            src={project.videoUrl}
-            controls
-            playsInline
-            className="h-full w-full object-cover"
-            onPlay={() => setIsPlaying(true)}
-            onPause={() => setIsPlaying(false)}
-          />
+          project.videoUrl.includes("vimeo") ? (
+            <iframe
+              src={project.videoUrl}
+              className="h-full w-full"
+              frameBorder="0"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+              referrerPolicy="strict-origin-when-cross-origin"
+              title={project.title}
+            />
+          ) : (
+            <video
+              src={project.videoUrl}
+              controls
+              playsInline
+              className="h-full w-full object-cover"
+              onPlay={() => setIsPlaying(true)}
+              onPause={() => setIsPlaying(false)}
+            />
+          )
         ) : (
           <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden p-6 text-center">
             {/* Dark background */}

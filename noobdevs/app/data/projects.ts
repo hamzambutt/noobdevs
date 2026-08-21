@@ -2,7 +2,7 @@ export type Project = {
   id: string;
   title: string;
   subtitle: string;
-  category: "AI / ML" | "DevOps & Cloud" | "Full-Stack";
+  category: "AI / ML" | "DevOps & Cloud" | "Full-Stack" | "OSINT";
   description: string;
   tags: string[];
   metrics?: string;
@@ -14,6 +14,18 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    id: "specter",
+    title: "Specter",
+    subtitle: "Demo Walkthrough",
+    category: "OSINT",
+    description:
+      "A live demo walkthrough of Specter — see the full feature set in action.",
+    tags: ["OSINT"],
+    videoUrl: "https://player.vimeo.com/video/1219668398?title=0&byline=0&portrait=0&badge=0&autopause=1&player_id=0&app_id=58479&autoplay=1&muted=1&loop=1",
+    liveUrl: "#contact",
+    featured: true,
+  },
   {
     id: "sentinel-ai",
     title: "Sentinel AI",

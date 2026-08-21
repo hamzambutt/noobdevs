@@ -100,10 +100,10 @@ export default function ContactDudes() {
         aria-hidden="true"
         className="pointer-events-none absolute top-0 inset-x-0 z-20 flex justify-between px-2 sm:px-6 md:px-10 select-none -translate-y-full"
       >
-        {/* ════════════ LEFT SIDE (2 DUDES) ════════════ */}
-        <div className="relative flex items-end justify-end gap-2 sm:gap-6 md:gap-10 flex-1 pr-6 sm:pr-10 md:pr-16">
-          {/* ── DUDE 1: STRESSED ON MOBILE PHONE ── */}
-          <div className="relative flex items-end">
+        {/* ════════════ LEFT SIDE (1 on mobile, 2 on desktop) ════════════ */}
+        <div className="relative flex items-end justify-end gap-2 sm:gap-6 md:gap-10 flex-1 pr-3 sm:pr-8 md:pr-16">
+          {/* ── DUDE 1: STRESSED ON MOBILE PHONE (VISIBLE ON MOBILE) ── */}
+          <div className="relative flex items-end block transform scale-85 sm:scale-95 md:scale-100 transition-transform origin-bottom-right">
             <svg
               className="w-20 h-24 sm:w-24 sm:h-28 overflow-visible"
               viewBox="0 0 80 70"
@@ -168,8 +168,8 @@ export default function ContactDudes() {
             </svg>
           </div>
 
-          {/* ── DUDE 2: HOLDING FILE HUGGED TO CHEST WITH FALLING PAPERS ── */}
-          <div className="relative flex items-end">
+          {/* ── DUDE 2: HOLDING FILE HUGGED TO CHEST (HIDDEN ON MOBILE) ── */}
+          <div className="relative hidden md:flex items-end transform scale-85 sm:scale-95 md:scale-100 transition-transform origin-bottom-right">
             <svg
               className="w-22 h-24 sm:w-26 sm:h-28 overflow-visible"
               viewBox="0 0 90 70"
@@ -253,10 +253,10 @@ export default function ContactDudes() {
           </div>
         </div>
 
-        {/* ════════════ RIGHT SIDE (2 DUDES) ════════════ */}
-        <div className="relative flex items-end justify-start gap-2 sm:gap-6 md:gap-10 flex-1 pl-6 sm:pl-10 md:pr-16">
-          {/* ── DUDE 3: HEADPHONES CODER AT DESK & CHAIR ── */}
-          <div className="relative flex items-end">
+        {/* ════════════ RIGHT SIDE (1 on mobile, 2 on desktop) ════════════ */}
+        <div className="relative flex items-end justify-start gap-2 sm:gap-6 md:gap-10 flex-1 pl-3 sm:pl-8 md:pr-16">
+          {/* ── DUDE 3: HEADPHONES CODER AT DESK & CHAIR (HIDDEN ON MOBILE) ── */}
+          <div className="relative hidden md:flex items-end transform scale-85 sm:scale-95 md:scale-100 transition-transform origin-bottom-left">
             <svg
               className="w-26 h-24 sm:w-30 sm:h-28 overflow-visible"
               viewBox="0 0 100 70"
@@ -383,8 +383,8 @@ export default function ContactDudes() {
             </svg>
           </div>
 
-          {/* ── DUDE 4: TALKING ON LANDLINE PHONE ── */}
-          <div className="relative flex items-end">
+          {/* ── DUDE 4: TALKING ON LANDLINE PHONE (VISIBLE ON MOBILE) ── */}
+          <div className="relative flex items-end block transform scale-85 sm:scale-95 md:scale-100 transition-transform origin-bottom-left">
             <svg
               className="w-22 h-24 sm:w-26 sm:h-28 overflow-visible"
               viewBox="0 0 90 70"
