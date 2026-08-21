@@ -1,12 +1,21 @@
-# Root-level project clutter
-/node_modules/
-/dist/
+# Dependencies
+node_modules/
+
+# Next.js & Build Outputs (The fix for your merge conflicts)
+.next/
+out/
+build/
+dist/
 /.vite/
 
+# Environment Variables (Security)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
 # Generated or duplicate top-level files
-/README.md
-/package.json
-/package-lock.json
 /README copy*.md
 /noobdevs.html
 /posthog-analysis.json
@@ -18,5 +27,8 @@
 *.log
 npm-debug.log*
 yarn-debug.log*
-noobdevs/dist/dev/
-
+yarn-error.log*
+pnpm-debug.log*
+# Antigravity / Vercel cache
+.antigravity/
+.vercel/
